@@ -1,0 +1,45 @@
+#1]  4 ways to see output in JavaScript ->
+1. alert()
+2. console.log()
+3. document.write()
+4. document.getElementById().innerHTML
+
+#2] <script> tag in javascript can be written anywhere in HTML document, whether it is in <head> tag or <body> tag
+there's no difference in writing it anywhere.
+
+#3] if we are outputing javascript with console.log, then we will see that in our browser's console and not on the home page.
+
+#4] if we are outputing javascript with document.write(), whatever the text is typed inside(), we will see the output on the screen itself.
+
+#5] suppose we are outputing javascript with document.write() and we made a spelling mistake or any other syntax error, like document.writ(), then the
+error for incorrect syntax will not be displayed directly on the screen, rather it will be displayed on the console.
+
+
+#6] Let's say we want to output inside the HTML tag, then we will create a <div id="box"> tag in html along with it's id,
+and refer the id within javascript's document.getElementById('box').innerHTML = "Sentence" and this will display the
+Sentence into out html tag.
+
+
+#7] Note that HTML renders code from up to down, so best practice it to put the <script> tag at the last of the HTML code,
+so that first the HTML code is loaded and then the JavaScript code is referred to it.
+
+
+#8] If you want to link external javascript file into the html file then, use <script src="my.js"></script> into the html file,
+where script tag with source address of the external javascript file needs to mentioned in the src.
+
+#9] As I mentioned in Point #7] that HTML renders code from up to down, so best practice it to put the <script> tag at the last of the HTML code,
+but an another solution is to use 'defer' in our <script> tag i.e if we have initialized <script> tag before the html then,
+we can use <script defer src="my.js"></script> wherein when we use 'defer' it let's the HTML load first then the javascript
+code is run, even if javascript is initialized before the html.
+
+#10] We can create multiple javascript files and link them into html file with <script> tag, i.e we cam have as many as
+<script> tag inside out html file.
+
+
+#11] There are 2 Q's which arises i.e where should we write JavaScript, 1. inside our html file only within the <script> tag,
+or 2. Create a new javascript file and write the whole javascript code inside that file and link that javascript file inside
+our html file with the <script src> tag.
+So, it is adviseable that is a particular javascript code is to be used on just single html page, we can you the 1st method,
+else if particular javascript code can be used in different files, then we can use the 2nd method.
+
+
