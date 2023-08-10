@@ -1,0 +1,1 @@
+document.getElementById('box1').innerHTML = "Allennnnn!";
