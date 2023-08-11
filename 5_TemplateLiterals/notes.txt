@@ -1,0 +1,39 @@
+#1] Suppose we have, var name = "Allen",
+    and we want that var name should be printed inside document.write('Hello'),
+    so here we concatenate that var like, document.write("Hello"+name);
+    so, it will display - Hello Allen, which was taken from var name.
+
+#2] When we use concatenate in javascript we use the + symbol.
+    Like suppose, var name = "Allen"
+                  document.write("Hello "+name+" Good Morning!")
+    The above will display output as - Hello Allen Good Morning!
+    The name which is concatenated in document.write will take it's value from var name.
+
+#3] Although concatenation makes it little unreadable inside the code for normal users,
+    Here Template literal helps us.
+    If we use Template literal we don't need to use + symbol again and again.
+
+#4] When we make string inside document.write("Hello world") here, we use double quotes(" ") inside document.write,
+    but instead of that we can use back tick(`)(on your keyboard above TAB button and left of number 1 button you will find this ` symbol)
+    So here how it is in code let's see, var name = "Allen"
+                                         document.write(`Hello ${name}, Good Morning`)
+                            The above will give output as - Hello Allen, Good Morning
+    So, basically we are using back tick(`) insted of double or single quote and instead of concatenation we do ${name},
+    which will eventually fetch the value of var name.
+
+#5} Suppose we are giving output as, console.log("Hello Salll! \nGood Morning!")
+    So we will get output in our console as Hello Salll!
+                                            Good Morning!
+As you can see we have got Hello Salll! on one line and Good Morning on the next line because of using '\n' between them,
+so, suppose if we don't use \n and just do it as, console.log("Hello Salll!
+                                                               Good Morning!)
+                                So here we will get an error in the console.
+So, what if we use Template literal here i.e back tick(`) we don't need to put any \n nor we will get any error if we just enter it on another line.
+So, suppose if we use Template literal i.e back tick(`), console.log('Hello Salll!
+                                                                    Good Morning!`)
+                                So, we will get output in our console as Hello Salll!
+                                                                        Good Morning!
+                    So, whatever gaps we have given it will take it and print our output the same was including all the gaps.
+
+
+#6] Literal i.e back tick(`) is useful when we have to print String, and inside that String we have an variable inside it.
