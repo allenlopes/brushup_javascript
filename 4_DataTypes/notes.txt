@@ -1,0 +1,84 @@
+#1] Data types are used to know the type of variable we have made, like if the value with the variable is integer, or string or boolean etc.
+
+
+#2] To know the data type we use 'typeof' inside our output.
+        For ex, var x = 23
+                document.write(typeof x)
+        The above will display the typeof x as string,
+        So, typeof is used to basically tell us what type of variable it is which we have made.
+
+
+#3] We have 7 types of Data Types in JavaScript:
+    1. String
+    2. Number
+    3. Boolean
+    4. Array
+    5. Object
+    6. Null
+    7. Undefined
+
+#4] 1. String -> String means character of sequences,
+        Wherever we have characters, we call it strings.
+        For ex. var x = "Allen"
+                document.write(typeof x);
+        The above will display the output as typeof x which is - String
+        Even if we take the var x = 'Allen' in single quote , it will display it's type as String only.
+        *Note- If for ex. var x = '10' or var x = "10",
+        The above var x which has value 10 in single and double quote will also display it's type as String only.
+        So, if we want to display it as data type of number then, we don't need to give the single or double quotes to it.
+
+
+    2. Number -> Number means integer values, or float values or decimal values like, 10, 23, 4, 13.2, 342.4, etc..
+        For ex. var x = 10
+                document.write(typeof x)
+        The above will display the output as typeof x which is - number
+        ALSO,
+        If we have decimal numbers like, 10.2, 3342.24, 243.2, etc.. it will display it as datatype of number only.
+        For ex. var x = 23.34
+                document.write(typeof x)
+        *Note- If for ex. var x = Allen, then it will display error in console,
+        Since, var x = Allen is not String(since it is not in single or double quotes) nor an Number to return it's datatype.
+
+
+    3. Boolean -> Boolean means true or false.
+        For ex. var z = 3 > 2
+                document.write(z)
+        The above will display the output in Boolean as TRUE or FALSE. (here it will display true since 3 is greater than 2)
+        If,  var z1 = 3 < 2
+             document.write(z1)
+        It will display the output in Boolean as FALSE.
+        AND, if we do,
+                    var z = 3 > 2;
+                    document.write(typeof z)
+        The above will display the output as typeof z i.e Boolean.
+
+
+    4. Array -> We define array as,
+                var a = ['x', 'b']
+                document.write(typeof a)
+        The above will display the typeof array 'a' as Object,
+        Whenever we see data type of Array in JavaScript, it will always display it's datatype as Object, which we will learn later on why it is so.
+
+
+    5. Object -> In case of object,
+                var obj = {'x':20, 'y':44}
+                document.write(typeof obj)
+        The above will display the typeof object as object only,
+        So, the datatype of object is object only and the datatype of array is also object.
+
+
+    6. Null -> In case of null,
+                var nal = null;
+                document.write(typeof nal)
+        The above will display the typeof Null as object only,
+        So, the datatype of Null is object and not null.
+
+        *Note - The datatype of array is Object, the datatype of object is object and the datatype of null is also object.
+
+
+    7. Undefined -> Suppose we create an variable x,
+                    var y;
+                    document.write(typeof y)
+        The above code will display the typeof Undefined as Undefined only,
+        Since, we have just defined the variable y and didn't assigned any value to it yet,
+        So, it will give it's type as Undefined.
