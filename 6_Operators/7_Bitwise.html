@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <script>
+    /*  Bitwise
+        &(AND)   |(OR)   ~(NOT)  ^(XOR)    <<(LEFT SHIFT)   >>(RIGHT SHIFT)
+
+        64  32  16  8   4   2   1
+    */
+
+    document.write(4 & 2)
+    /*  64  32  16  8   4   2   1
+For Binary 4->      0   1   0   0
+For Binary 2->      0   0   1   0
+-----------------------------------
+Common in both ->   0   0   0   0  // IT WILL PRINT OUTPUT AS 0
+    */
+
+document.write('<br/>')
+
+    document.write(5 & 1)
+    /*  64  32  16  8   4   2   1 -- Decimal Nos.
+For Binary 5->      0   1   0   1
+For Binary 1->      0   0   0   1
+-----------------------------------
+Common in both ->   0   0   0   1  // IT WILL PRINT OUTPUT AS 1
+    */
+
+
+document.write('<br/>')
+document.write('<br/>')
+
+    document.write(4 | 2)
+    /*  64  32  16  8   4   2   1
+For Binary 4->      0   1   0   0
+For Binary 2->      0   0   1   0
+-----------------------------------
+1's in both ->      0   1   1   0  // IT WILL PRINT OUTPUT AS 6(Since it's decimal value of 0 1 1 0 is 6)
+    */
+
+
+document.write('<br/>')
+document.write('<br/>')
+
+    document.write(5 ^ 1)
+    /*  64  32  16  8   4   2   1 -- Decimal Nos.
+For Binary 5->      0   1   0   1
+For Binary 1->      0   0   0   1
+-----------------------------------
+If both 1 then 0->  0   1   0   0  // IT WILL PRINT OUTPUT AS 4(Since it's decimal value of 0 1 0 0 is 6)
+    */
+
+
+document.write('<br/>')
+document.write('<br/>')
+
+    document.write(4 << 2)
+    /*              64  32  16  8   4   2   1
+For Binary 4->      0   0   0   0   1   0   0
+After left shift->  0   0   1   0   0   0   0   //// IT WILL PRINT OUTPUT AS 16(Since it's decimal value of 0   0   1   0   0   0   0 is 16)
+*/
+
+
+document.write('<br/>')
+document.write('<br/>')
+
+    document.write(4 >> 2)
+    /*                  64  32  16  8   4   2   1
+For Binary 4->          0   0   0   0   1   0   0
+After right shift->     0   0   0   0   0   0   1   //// IT WILL PRINT OUTPUT AS 1(Since it's decimal value of 0   0   0   0   0   0   1 is 1)
+*/
+
+
+document.write('<br/>')
+document.write('<br/>')
+    document.write(~5); // -(5+1) i.e -6
+    document.write('<br/>')
+    document.write(~-5); // -(-5+1) i.e -(-4) so output will be 4
+
+
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

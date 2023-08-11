@@ -1,0 +1,24 @@
+#1] In JavaScript we have 7 types of Operators ->
+    1. Arithmetic
+        +   -   /   *   ++  --  **
+
+    2. Assignment
+        =   +=  -=  /=  *=  **=
+
+    3. String
+        +
+
+    4. Type
+        typeof
+        instanceof
+
+    5. Comparison
+        ==   ===  >  <  !=  !== >=  <= ?
+
+    6. Logical
+        &&  ||  !
+
+    7. Bitwise
+        &(AND)   |(OR)   ~(NOT)  ^(XOR)    <<(LEFT SHIFT)   >>(RIGHT SHIFT)
+
+        128  64  32  16  8   4   2   1

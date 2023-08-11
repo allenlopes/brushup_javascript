@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <script>
+    /* Comparison
+        ==   ===  >  <  !=  !== >=  <= ?
+    */
+
+        var x = 10;
+        var y = 10;
+        document.write(x==y); // == compares if two values are same but it doesn't checks the data type of two variables and give output in boolean way(i.e true or false)
+    document.write('<br/>')
+        var xx = 10;
+        var yy = '10'
+        document.write(xx==yy); // since == doesn't checks the data type, it will return true
+
+document.write('<br/>')
+
+        var x1 = '10'
+        var y1 = 10
+        document.write(x1 === y1) // === compares if two values are same and if their data type is also same and then give output in boolean way(i.e true or false)
+
+document.write('<br/>')
+
+        var x2 = 20
+        var y2 = 10
+        document.write(x2 > y2) // greater than
+    document.write('<br/>')
+        var x3 = 20
+        var y3 = 10
+        document.write(x3 < y3) // less than
+
+document.write('<br/>')
+
+        var x4 = 10
+        var y4 = 10
+        document.write(x4 >= y4) // greater than equal to
+    document.write('<br/>')
+        var x5 = 20
+        var y5 = 20
+        document.write(x5 <= y5) // less than equal to
+
+document.write('<br/>')
+
+        var z = 23
+        var w = '23'
+        document.write(z != w) // != (i.e not equal to) will just check if it's value is equal or not and it won't check it's data type
+    document.write('<br/>')
+        var z1 = 23
+        var w1 = '23'
+        document.write(z1 !== w1) // != (i.e triple not equal to) will check the value and also the data type of it
+
+document.write('<br/>')
+
+        var marks = 70
+        var result = (marks >= 50) ? "1st Division" : "Any Division"; //Basically ? is like if else loop, like if here, if marks >= 50(?) then print-"1st Division" else(:) print-"Any Division"
+        document.write(result)
+
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
