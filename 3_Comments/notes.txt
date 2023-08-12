@@ -1,0 +1,9 @@
+#1] Comments are used to tell us about our program in future, what we did in past and what values we didn't executed at
+    early time but want to execute in future.
+
+#2] Two ways to define Comments:
+    1. Single Line Comments
+    2. Multi Line Comments
+
+1. Single Line comments starts with - //
+2. Multi Line comments starts with /* and ends with */
