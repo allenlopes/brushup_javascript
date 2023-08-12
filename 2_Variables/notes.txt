@@ -1,0 +1,92 @@
+#1] Variables in Javascript are used to store values.
+
+#2] Variables are used when we want to store information that needs to be used repeatedly.
+
+#3] We write Variables in 3 ways in Javascript ->
+    1. var
+    2. let
+    3. const
+
+#4] 1. var -> if we declare variable var name = 'Allen', it will display Allen in the output when it is called inside
+                document.write(name),
+                if suppose we declare - var name = 'Allen'
+                                        name = 'Sall'
+                the name = 'Allen' will be overwritten by name = 'Sall' and we will get the output as Sall whenever name is called.
+                Basically, it will remove old value and replace it with new value.
+
+            * Note - It is not compulsory to use variable var while declaring variable, even if we declare it without variable,
+            like suppose name = 'Allen' and then output it to document.write(name), then it will display the name value 'Allen'.
+
+
+#5] 2. let -> just like we declared variable var we have variable let, like let name = 'Allen' it will display Allen in the output when it is called inside
+                document.write(name),
+
+            When ES6(Ecma Script 6) was introduced, let was added.
+            Basically let and var both function the same, but there is one big difference between them, let's understand that,
+
+            if suppose first we declare - let name;
+        and then we give value to name -  name = 'Allen';
+        it will display the name as Allen when document.write(name) is called, since after declaring variable we can later on give the value to the variable.
+
+        now, if suppose first we declare - let name = 'Allen';
+and again we declare variable name with let - let name = 'Sall';
+it will not display any output and display syntax error inside console.
+
+        now if suppose using var first we declare - var name = 'Allen'
+    and again we declare variable name with var -   var name = 'Sall'
+here, it will display the output as Sall and name 'Allen' will be overwritten by 'Sall'.
+
+
+        so, as you can see the main difference between var and let is,
+        once we initialized variable let name, we again cannot initialize the variable with same variable name,
+        like let name = 'Allen'
+             let name = 'Sall'  this is wrong in let since, in let we can only initialize variable name once.
+             In LET we cannot define the variable with same name again.
+        WHILE,
+        in variable var if we initialize var name once, we can again initialize the variable with the same variable name,
+        like var name = 'Allen'
+             var name = 'Sall' this is correct in var, and overwrite the var name = 'Allen' with var name = 'Sal'.
+             In VAR we can define the variable with same name again.
+
+
+        * Note that even if we declared the variable with same name but different variable it will display error,
+        like suppose first we declare - var name = 'Allen'
+                and then we declare -   let name = 'Allen' this is wrong and it will display error.
+        The above condition will also not work in vice versa case.
+
+
+#6] 3. const -> const means constant, like once we declare it, we cannot change it later on.
+                like if - const name = 'Allen'
+                          document.write(name)
+            the above will display the name as 'Allen'
+            AND IF, we declare the variable name again,
+            like if - const name = 'Allen'
+                      name = 'Sall'
+                      document.write(name)
+            the above will display an error since const can be declared only once.
+
+
+#7] if we declare a variable but not give an value to it and call it using document.write, then it will give output as'undefined'
+
+        like suppose we declare an variable -  var name;
+                                               document.write(name);
+                                the above will display output on the screen as 'undefined'
+    same way like suppose we declare an variable -  let name;
+                                                    document.write(name);
+                                the above will display output on the screen as 'undefined'
+    but for const it will display output on console.
+
+
+#8] There are two rules while naming Variables,
+    1. The first letter should always start with - _ $ a-z A-Z
+    2. The second letters can consist of - _ $ a-z A-Z 0-9
+    (Note that we cannot include hypen(-) in our variable name)
+
+
+#9] We can specify multiple Variables in one line like, var a = 10, b = 20, c = 30
+                                                                    OR
+                                                        let a = 10, b = 20, c = 30
+                                                                    OR
+                                                        const a = 10, b = 20, c = 30
+    AND
+    We can also output them in single line by, document.write(a,b,c)
