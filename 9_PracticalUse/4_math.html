@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <script>
+        /*
+            var listprice = 120
+            var saleprice = 100
+            var discount = ((listprice - saleprice)/listprice)*100;
+            document.write("Discount is: "+discount+"%")
+        */
+
+
+        /*
+        // Supoose we don't want the discount percent to be displayed in floating or decimal type, i.e 13.22 or 16.4444,etc..
+            var listprice = 120
+            var saleprice = 100
+            var discount = ((listprice - saleprice)/listprice)*100;
+            discount = Math.round(discount) // so math.round will basically evaluate the flaoting type output like, 13.22 or 16.77 to it's closest integer number, like 16.77 can be round figured to 17.
+            document.write("Discount is: "+discount+"%")
+        */
+
+
+        // If we want to wrap discount into an class we can do it in document.write itself
+            var listprice = 120
+            var saleprice = 100
+            var discount = ((listprice - saleprice)/listprice)*100;
+            discount = Math.round(discount)
+            document.write("<div class='discount_price'>Discount is: "+discount+"% </div>")
+            // for the above we have wrapped div into class discount_price, which when runned can be seen in the console of the browser
+
+        </script>
+    </head>
+</html>
