@@ -1,0 +1,7 @@
+#1] Whenever we have an condition, like if we have to select between 2 things here conditional statememts are helpful.
+
+#3] conditional statements are of three types
+    1. if
+    2. if-else
+    3. if-else if-else
+    4. Ternary(just like if-else)

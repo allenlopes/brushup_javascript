@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <script>
+
+        /*
+            let x = 5;
+            if(x>10)
+            {   // we have to use curly braces for if-else-if-else-if statements
+                document.write('Good');
+            }
+            else if(x == 10)
+            {
+                document.write("Value 10")
+            }
+            else if(x == 5)
+            {
+                document.write("Value 5")
+            }
+            else
+            {
+                document.write('Bad')
+            }
+        */
+
+            let age = 4;
+            let ticketprice = 650;
+            let discount = 200;
+            let child_discount = 400
+
+            if(age >= 60)
+            {
+                ticketprice -= discount // basically, ticketprice = ticketprice - discount
+                document.write("Hey Senior Citizen, your ticket price is: "+ticketprice)
+            }
+            else if(age <= 10)
+            {
+                ticketprice -= child_discount
+                document.write("Hey Child, your ticket price is: "+ticketprice)
+            }
+            else
+            {
+                document.write("Your ticket price is "+ticketprice)
+            }
+
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

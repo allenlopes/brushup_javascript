@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <script>
+        /*
+            let x = 15;
+            switch(x)
+            {
+                case 10: // it means that if x has value 10, then document.write
+                document.write("Value 10");
+                break; //  also we have to add break at the end of each case statement,or else it will print the next case's output too
+
+                case 15:
+                document.write("Value 15");
+                break;
+
+                // if values are not from the above then we put default case, it's just like else in an if-else condition
+                default:
+                document.write("No Value");
+                break;
+            }
+        */
+
+            let age = 55;
+            let ticketprice = 600;
+            let senior_discount = 200;
+            let child_discount = 400;
+
+            switch(true){
+                case age >= 60:
+                ticketprice -= senior_discount;
+                document.write("Senior Citizen price: "+ticketprice);
+                break;
+
+                case age <= 10:
+                ticketprice -= child_discount;
+                document.write("Child price: "+ticketprice);
+                break;
+
+                default:
+                document.write("Normal ticket price: "+ticketprice);
+            }
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
