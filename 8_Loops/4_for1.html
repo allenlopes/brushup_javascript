@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <script>
+
+        /* Break ->
+            for(var x = 1; x <= 10; x++)
+            {
+                if(x == 5)
+                {
+                    break; // basically break means if x becomes value 5, it will then break out of the loop
+                }
+                document.write("2 x "+x+" = "+2*x+"<br/>")
+            }
+        */
+
+            for(var x = 1; x <= 10; x++)
+            {
+                if(x == 5)
+                {
+                    document.write("2 x "+x+" = "+2*x+"*<br/>") // I have added * along with it's output to understand how continue works.
+                    continue; // Whenever continue is there, it basically doesn't break the loop, just goes on to next value from the for loop.
+                }
+                    document.write("2 x "+x+" = "+2*x+"<br/>")
+            }
+
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
