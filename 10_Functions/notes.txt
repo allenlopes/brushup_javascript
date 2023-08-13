@@ -1,0 +1,39 @@
+#1]
+
+
+#2]
+
+
+#3]
+
+
+#4] Two types of Functions ->
+    1. Parameterized Function
+    2. Non Parameterized Function
+
+
+#5] 1. Parameterized Function -
+        Parameterized Functions are those functions where we pass values or variables inside (),
+        For ex, -
+        function addNumber(x , y){
+            document.write(x + y);
+        }
+        addNumber(10, 20);
+    So, in the above example as we can see we have passed x and y inside function addNumber,
+    So, when later on when we call the addNumber function, we also give 2 values on place of x and y, inside our (), and
+    it takes that values and place it instead of x and y and give result of x + y as stated in the function.
+
+    2. Non Parameterized Function
+        Non Parameterized Functions are those functions wherein we don't pass values inside (),
+        For ex, -
+        function addNumber(){
+            var x = 10;
+            var y = 20;
+            document.write(x+y);
+        }
+        addNumber();
+        So,in the above example as we can see we have already declared the values of x and y inside our function addNumber,
+        So, to peform any operations on them we just later on call that function, without passing any values inside ().
+
+
+#6] We can access variables in javascript using local variable and global variable

@@ -1,0 +1,35 @@
+<script>
+    /*
+    function addNumber(x , y){
+        document.write(x + y);
+    }
+    // calling the above function i.e addNumber by prodiving 2 value, i.e x and y, since it is parameterized function.
+    addNumber(23, 20);
+    */
+
+
+    /*
+    // Suppose for calculating Discount for every product in store we can write Parameterized Function as,
+    function getDiscount(listPrice, salePrice){
+        var discount = ((listPrice - salePrice)/listPrice)*100;
+        discount = Math.round(discount);
+        document.write("Discount is: "+discount+"%");
+    }
+    // calling the above function i.e getDiscount by providing 2 values, i.e listPrice of the product, and salePrice of the product
+    getDiscount(120, 100);
+    */
+
+
+    // Now for the above ex. code we can also include dynamic <div> for every value of discount displayed,
+    function getDiscount(listPrice, salePrice, divclass){
+        var discount = ((listPrice - salePrice)/listPrice)*100;
+        discount = Math.round(discount);
+        document.write("<div class="+divclass+"> Discount is: "+discount+"% </div>");
+    }
+    // calling the above function i.e getDiscount by providing 23 values, i.e listPrice of the product, and salePrice of the product and also the name for <div> tag
+    getDiscount(120, 100, 'divfirst');
+
+    getDiscount(500, 400, 'divsecond');
+
+
+</script>
