@@ -1,0 +1,62 @@
+#1] Anonymous functions are those functions wherein we don't need to keep name for it.
+
+#2] We create a function which don't have any name, and it will be automatically called.
+
+#3] Why do we use Anonymous functions?
+->  * Whenever we don't need functions that much to use, but in out code there are variables which can be conflicted, then we use anonymous functions.
+    * Whenever we know that the function we made, will work as function only, but it's requirement is not more than one time, ]
+      at that time too we can use anonymous functions inside an variable and call it.
+
+
+#4] Let's say we create two files, which includes code,
+    File 1 - 1_test.js ->
+                        let x = 10;
+                        let y = 20;
+                        document.write(x + y);
+
+    File 2 - 2_test.js ->
+                        let x = 30;
+                        let y = 40;
+                        document.write(x * y);
+
+    We call the above two files inside our index.html as using script tag,
+                <script src="1_test.js"></script>
+                <script src="2_test.js"></script>
+
+    But, only the first file will give output(i.e x + y = 30) but we won't get output for 2nd file.
+    Because, we have created variable with 'let' and as we know that once the variable is initialized with 'let',
+    we won't be able to initialize the same variable name with 'let'.
+
+    What happened is both the javascript we included in our index.html file has the variable with same names, which will become conflict.
+
+    Even if we create functions to call them differently, maybe functions will also conflict because of same function name.
+    So, here we use anonymous function.
+    Anonymous function for two .js files,
+    File 1 - 1_test.js ->
+                        // Anonymous function
+                        (function () {
+                        let x = 10;
+                        let y = 20;
+                        document.write(x + y);
+                        }) ();
+
+    File 2 - 2_test.js ->
+                        // Anonymous function
+                        (function () {
+                        let x = 10;
+                        let y = 20;
+                        document.write(x * y);
+                        }) ();
+        For the above at last () this indicates function is called.
+
+    Because of creating anonymous function, the variables are independent.
+
+
+#5] Another way to use anonymous function is that the output can be taken inside an variable.
+    For ex, if we create <script> inside our index.html file then,
+        <script>
+            var x = function (){
+                document.write("Hello");
+            }
+            x(); // Printing the anonymous function by calling the variable name.
+        </script>
