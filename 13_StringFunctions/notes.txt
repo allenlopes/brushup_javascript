@@ -1,0 +1,48 @@
+#1] There are different types of string functions in JavaScript, let's see them one by one,
+
+    1. typeof -> gives the type of variable i.e string, number, boolean, object, etc..
+        var name = "Allen";
+        document.write(typeof name); -> It will display the type of variable name, i.e string in this case.
+
+
+    2. length -> gives the length of the variable even though if it's number it gives it's length too.
+        var name = "Allen";
+        document.write(name.length);
+
+
+    3. search ->  if in a string, if there are many words and we want to find a particular word's position, search can be used
+                and the word's to be searched needs to be case sensitive.
+        var name = "Allen is a nerd Programmer, having less knowledge but passion for learning makes him worthy";
+        document.write(name.search("passion"));
+
+
+    4. indexOf -> if in a string we have many similar words, it tells the index of first occurring word.
+        var name = "Allen is a nerd Programmer, Allen has less knowledge but passion for learning makes him worthy";
+        document.write(name.indexOf("Allen"));
+
+    4.1 lastIndexOf -> if in a string we have many similar words, it tells the last index of the word, like if word "Allen" is repeated
+                        for atleast 10 times, then it will tell the 10th index of word "Allen"
+        var name = "Allen is a nerd Programmer, Allen has less knowledge but passion for learning makes him worthy";
+        document.write(name.lastIndexOf("Allen"));
+
+
+    5. slice -> basically giving us the output of the entered index position of words,
+                Matlb "Kaha se kaha tak means start from position 12 and display till 16 and 16 is not included.
+        var name = "Allen is a nerd Programmer, Allen has less knowledge but passion for learning makes him worthy";
+        document.write(name.slice(1,4));
+        OR
+        var name1 = "Allen is a nerd Programmer, Allen has less knowledge but passion for learning makes him worthy";
+        document.write(name1.slice(12)); // display data from position 12 and all further on..
+        OR
+        var name2 = "Allen is a nerd Programmer, Allen has less knowledge but passion for learning makes him worthy";
+        document.write(name2.slice(-12)); // start displaying the data from backwards position 12 and till the end..
+
+
+    6. substring -> basically same as slice, but doesn't takes negative numbers to display from.
+        var name = "Allen is a nerd Programmer, Allen has less knowledge but passion for learning makes him worthy";
+        document.write(name.substring(12)); // display data from position 12 and all further on..
+
+
+    7. substr -> basically same as slice, but will start displaying data and will go upto addition of given number only.
+        var name = "Allen is a nerd Programmer, Allen has less knowledge but passion for learning makes him worthy";
+        document.write(name.substr(13, 4)); // display data starting from position 13 and +4 positions i.e if it starts from position 13 then it will add more 4 to it(13+4 = 17),but it will go upto 16th position only..
