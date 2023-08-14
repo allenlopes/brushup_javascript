@@ -1,0 +1,49 @@
+
+<script>
+    /*
+    var result = prompt("Please enter your name");
+    if(result == "" || result == null)
+    {
+        document.write("Please provide your name");
+    }
+    else
+    {
+        document.write("Welcome "+result);
+    }
+    */
+</script>
+
+<br/>
+
+<script>
+
+/*
+    // In prompt("Please enter number 1", 0) // the first parameter is just the sentence and the second parameter i.e 0 is value inside the text box i.e default parameter.
+    var num1= parseInt(prompt("Please enter number 1", 0)); // basically 'parseInt' converts the string to Integer type, we are using parseInt here because prompt takes input as string only, so we are forcefully converting the string to Integer so that we get output as addition of them.
+    var num2 = parseInt(prompt("Please enter number 2", 0)); // basically 'parseInt' converts the string to Integer type, we are using parseInt here because prompt takes input as string only, so we are forcefully converting the string to Integer so that we get output as addition of them.
+    if(num1 == "" || num1 == null || num2 == "" || num2 == null)
+    {
+        document.write("Please reload the page and provide 2 numbers to add them.");
+    }
+    else
+    {
+        document.write(typeof num1);
+        document.write("Addition is: "+(num1+num2)); // while adding or performing operation on integer inputs, we should put them inside () brackets only.
+    }
+*/
+
+    //
+
+    var num1= prompt("Please enter number 1", 0);
+    var num2 = prompt("Please enter number 2", 0);
+    if(num1 == "" || num1 == null || num2 == "" || num2 == null)
+    {
+        document.write("Please reload the page and provide 2 numbers to add them.");
+    }
+    else
+    {
+        num1 = parseInt(num1); // we can also put parseInt like this
+        num2 = parseInt(num2); // we are also put parseInt like this
+        document.write("Addition is: "+(num1+num2)); // while adding or performing operation on integer inputs, we should put them inside () brackets only.
+    }
+</script>

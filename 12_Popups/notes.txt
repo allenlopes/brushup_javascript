@@ -1,0 +1,4 @@
+#1] Types of Popups in JavaScript ->
+    1. alert - used when we need to display an message.
+    2. confirm - used when we want to take confirmation from the user if user wants to perform such action or not.
+    3. prompt - used when we need to take input from the user.
