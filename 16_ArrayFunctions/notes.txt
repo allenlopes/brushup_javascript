@@ -1,0 +1,122 @@
+#1] Array Functions are -
+    1. length
+    2. concat(arr)
+    3. pop()
+    4. shift()
+    5. push()
+    6. unshift()
+    7. splice(position, length)
+    8. indexOf()
+    9. Array.isArray(arr)
+    10. split()
+    11. join()
+
+
+#2] 1. length -> It tells us the number of arrays inside our array.
+        For ex. -
+            var arr =["Allen", "Sal"];
+            document.write(arr.length);
+
+        If we want to make our array blank we can make it with the help of length function too,
+        Code -
+            var arr =["Allen", "Sal"];
+            arr.length = 0;
+            document.write(arr.length)
+
+
+    2. concat -> it will basically combine 2 arrays and print the result
+            var arr =["Allen", "Sal"];
+            var arr1 =["Lopes", "Dmello"];
+            var result = arr.concat(arr1); // concat will combine arr with arr1
+            document.write(result)
+
+
+    3. pop -> if we want to delete an element(value) from an existing array, pop does that.
+        * Note- pop removes the element(value) from right side i.e end side of our array.
+            var arr =["Allen", "Sal", "Lopes"];
+            arr.pop(); // basically it will pop out the last element in our array, in this case it is Lopes.
+            document.write(arr);
+
+
+    4. shift -> it same as pop, but instead of removing element(value) from the right side or end side of our array,
+                it will pop out from the left side or start side of our array.
+            var arr =["Allen", "Sal", "Lopes"];
+            arr.shift(); // basically it will pop out the first element in our array, in this case it is Allen.
+            document.write(arr);
+
+
+    5. push -> it will add an element(value) inside our array at last position.
+            var arr =["Allen", "Sal"];
+            arr.push("Lopes"); // basically it will push the entered element(value) inside our array at the last, in this case it will add "Lopes".
+            document.write(arr);
+
+
+    6. unshift -> it is same as push operation but will add an element(value) inside our array at first position.
+            var arr =["Allen", "Sal"];
+            arr.unshift("Lopes"); // basically it will push the entered element(value) inside our array at the first, in this case it will add "Lopes".
+            document.write(arr);
+
+
+    7. splice(position, length) -> basically splice is somewhat like pop, like we can remove element with it, but in splice,
+        we mention the array's index position and if we want to remove all the arrays after that index position then we write the
+        end index position of our array and it will remove all that array.(I know it's bit confusing just try running the code and you will understand)
+    //
+        var arr =["Allen", "Sal", "Lopes"];
+        arr.splice(1, 1); // basically (1, 1) means, it will remove the element(value) at index position 1 till element(value) at index position 1.
+        document.write(arr);
+
+document.write('<br/>');
+    //
+        var arr =["Allen", "Sal", "Lopes", "Atomic", "Habits"];
+        arr.splice(2, 4); // basically (2, 3) means, it will remove the element(value) at index position 2 till element(value) at index position 3.
+        document.write(arr);
+
+
+    8. indexOf -> If we want the index position of particular array element, then indexOf helps for it.
+        var arr =["Allen", "Sal", "Lopes", "Atomic", "Habits"];
+        document.write(arr.indexOf("Atomic")); // it will display the index position of the element
+
+document.write('<br/>');
+
+    // if we want to remove index position of an value which is not present in our array then it will give -1
+        var arr =["Allen", "Sal", "Lopes", "Atomic", "Habits"];
+        document.write(arr.indexOf("Epic"));
+
+
+    9. Array.isArray -> if we have particular data and we want to check if it's array or not then Array.isArray function is useful.
+        var arr =["Allen", "Sal", "Lopes", "Atomic", "Habits"];
+        document.write(Array.isArray(arr)); // it will display true if it's array else it will display false if it's not an array
+
+document.write('<br/>');
+
+    // let's see an ex. of not an array
+    var arr1 = "qwerty";
+    document.write(Array.isArray(arr1));
+
+
+    10. split -> it helps in converting our normal string into an array.
+        var str = "My name is AllenLopes23";
+        var result = str.split(" "); // (" ") the blank space we left is because we are telling the function to split the string into array from that blank; means at blank space there will be comma(,).
+        document.write(result); // basically it will give result as an array
+
+document.write('<br/>');
+
+    //
+        var str1 = "My name is AllenLopes23";
+        var result1 = str1.split("name"); // ("name") means it will split the string into array from that name; means at name there will be comma(,).
+        document.write(result1); // basically it will give result as an array
+
+Real life use case of split function ->
+    Suppose we have an website wherein a user types his first name and last name while creating an account, and we take that input as string;
+    so once the account is created the user should get a message of Welcome along with his/her first name only and not last name,
+    so, we can use split function to convert an string to array and then display the index position of first name of that array element.
+    Code ->
+        var name = "Allen Lopes";
+        var arr = name.split(" ");
+        document.write("Welcome "+arr[0]);
+
+
+    11. join -> basically reverse of split i.e it converts an array into string.
+        var arr =["Allen", "Sal", "Lopes", "Atomic", "Habits"];
+        var result = arr.join(" "); // basically it converts the given array into an normal string
+        document.write(result);

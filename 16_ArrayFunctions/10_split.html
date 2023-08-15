@@ -1,0 +1,24 @@
+<script>
+    //
+        var str = "My name is AllenLopes23";
+        var result = str.split(" "); // (" ") the blank space we left is because we are telling the function to split the string into array from that blank; means at blank space there will be comma(,).
+        document.write(result); // basically it will give result as an array
+
+document.write('<br/>');
+
+    //
+        var str1 = "My name is AllenLopes23";
+        var result1 = str1.split("name"); // ("name") means it will split the string into array from that name; means at name there will be comma(,).
+        document.write(result1); // basically it will give result as an array
+
+document.write('<br/>');
+
+/*
+    Suppose we have an website wherein a user types his first name and last name while creating an account, and we take that input as string;
+    so once the account is created the user should get a message of Welcome along with his/her first name only and not last name,
+    so, we can use split function to convert an string to array and then display the index position of first name of that array element.
+*/
+        var name = "Allen Lopes";
+        var arr = name.split(" "); // it will first convert the string to array, so the array will get it's index positions which we can print the first name of the person with the array element's index position.
+        document.write("Welcome "+arr[0]); // printing the first name using the array's index position 0.
+</script>
