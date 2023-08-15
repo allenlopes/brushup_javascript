@@ -1,0 +1,48 @@
+#1] foreach is specifically made for array.
+
+
+#2] it is basically just like for loop but the advantage of foreach loop is that we don't need to remember,
+    where we need to start, where we need to end, what is the length, etc..
+
+
+#3] whatever the data inside our array is there we just print that using foreach loop,
+// Printing using for loop
+/*
+    var arr = ["Allen", "Sal", "Lopes"];
+    for(var i = 0; i<3; i++) {
+        document.write(arr[i]);
+        document.write('<br/>');
+    };
+*/
+
+
+// Printing using foreach loop
+/*
+    var arr = ["Allen", "Sal", "Lopes"];
+    arr.forEach(function(value) {
+        document.write(value);
+        document.write('<br/>')
+    });
+*/
+
+
+// If we want to print the index position along with the value using foreach loop then,
+/*
+    var arr = ["Allen", "Sal", "Lopes"];
+    arr.forEach(function(value, index) {
+        document.write(value);
+        document.write(" ");
+        document.write(index);
+        document.write('<br/>')
+    });
+*/
+
+// Another way of Printing foreach loop along with printing the index position
+    var arr = ["Allen", "Sal", "Lopes"];
+    arr.forEach(arrFunctn);
+    function arrFunctn(val, key){
+        document.write(val);
+        document.write(" ");
+        document.write(key);
+        document.write('<br/>')
+    }
