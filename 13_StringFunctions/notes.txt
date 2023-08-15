@@ -6,6 +6,7 @@
 
 
     2. length -> gives the length of the variable even though if it's number it gives it's length too.
+        Note - length also includes the spaces between words.
         var name = "Allen";
         document.write(name.length);
 
@@ -46,3 +47,51 @@
     7. substr -> basically same as slice, but will start displaying data and will go upto addition of given number only.
         var name = "Allen is a nerd Programmer, Allen has less knowledge but passion for learning makes him worthy";
         document.write(name.substr(13, 4)); // display data starting from position 13 and +4 positions i.e if it starts from position 13 then it will add more 4 to it(13+4 = 17),but it will go upto 16th position only..
+
+
+    8. replace -> it replaces particular word inside out given string, like ex. if we want to replace word "Allen" with "Sall", it will replace it.
+        var name = "Allen is a nerd Programmer, Allen has less knowledge but passion for learning makes him worthy";
+        var r = name.replace("Allen", "Sal"); // replace basically replaces the first occuring word in our string which we want to replace, like suppose we want to replace "Allen" with "Sal" and there are total 10 words with "Allen" so it will only replace the first word "Allen"
+        document.write(r);
+
+
+    9. toLowerCase -> it makes all the sentence in the string into lower case.
+        var name = "Allen is a nerd Programmer, Allen has less knowledge but passion for learning makes him worthy";
+        document.write(name.toLowerCase());
+
+
+    10. toUpperCase -> it makes all the sentenc inside the string into Upper Case.
+        var name = "Allen is a nerd Programmer, Allen has less knowledge but passion for learning makes him worthy";
+        document.write(name.toUpperCase());
+
+
+    11. trim -> it trims the space from star and at the end only and then we call length with trim to display the length of the string.
+        var name = " Allen is a nerd Programmer, Allen has less knowledge but passion for learning makes him worthy ";
+        document.write(name.trim().length); // basically trim won't include the spaces left at start and at the end only. It will include the spaces inside the string after each word.
+
+
+    12. concatenate -> concatenation basically combines 2 strings,
+        It can be done in 2 ways ->
+        1st Way -
+            // One way is to add + between two variables
+                var name1 = "Allen is a nerd Programmer,";
+                var name2 = "Allen has less knowledge but passion for learning makes him worthy"
+                document.write(name1+" "+name2);
+
+        2nd Way -
+            // second is to add concat to join 2 variables
+                var name1 = "Allen is a nerd Programmer,";
+                var name2 = "Allen has less knowledge but passion for learning makes him worthy"
+                document.write(name1.concat(" ", name2));
+
+
+    13. [0] -> it will basically give the sentence inside the string at 0th position, and likewise so on..
+        var name = "Allen is a nerd Programmer";
+        document.write(name[0]); // it will give the letter the 0th position.
+
+        document.write('<br/>');
+
+        var name = "Allen is a nerd Programmer";
+        document.write(name[12]); // it will give the letter the 12th position.
+
+
