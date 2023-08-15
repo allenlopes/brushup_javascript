@@ -1,0 +1,61 @@
+<script>
+    // First we just display all the values inside our array using for loop ->
+    /*
+    var arr = [
+        ["Allen", "Pune"],
+        ["Sall", "Mumbai"],
+        ["Lopes", "Delhi"],
+    ];
+
+    for(var i = 0; i < 3; i++)
+    {
+        document.write(arr[i]);
+        document.write('<br/>')
+    }
+    */
+
+
+    // Now we display all the values as rows and columns ->
+    /*
+    var arr = [
+        ["Allen", "Pune"],
+        ["Sall", "Mumbai"],
+        ["Lopes", "Delhi"],
+    ];
+
+    for(var i = 0; i < 3; i++) // basically rows or outer loop
+    {
+        for(var j = 0; j < 2; j++) // basically columns or inner loop
+        {
+            document.write(arr[i][j]);
+            document.write('<br/>')
+        }
+
+    }
+    */
+
+
+    // Now for displaying it into table format we add html <table> tag ->
+    var arr = [
+        ["Allen", "Pune"],
+        ["Sall", "Mumbai"],
+        ["Lopes", "Delhi"],
+    ];
+
+    document.write("<table border= 1px>"); // basically the table starts here,
+    document.write("<tr> <td>Sr. No.</td> <td>Name</td> <td>City</td> </tr>") // Adding table row and table data tags and also adding a serial no. column
+    var k = 1; // it is for Sr. No.
+    for(var i = 0; i < 3; i++) // basically rows or outer loop
+    {
+        document.write("<tr>"); // New table row starts here
+        document.write("<td>"+k+"</td>") // For printing sr. no. one by one
+        for(var j = 0; j < 2; j++) // basically columns or inner loop
+        {
+            document.write("<td>"+arr[i][j]+"</td>"); // printing the output of our array inside table data
+        }
+        k++; // incrementing serial no.
+        document.write("</tr>");
+    }
+    document.write("</table>");
+
+</script>

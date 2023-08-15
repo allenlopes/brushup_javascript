@@ -1,0 +1,92 @@
+#1] Multidimension array means, array inside an array.
+    For ex,
+    var arr = [
+        ["Allen", "Pune"],
+        ["Sall", "Mumbai"]
+    ];
+    document.write(arr);
+
+
+#2] Suppose we print the 0th index of the Multidimension array then it will display the whole single array as 0th index, let's understand with code -
+    var arr = [
+        ["Allen", "Pune"], // for 0th index, it will print this whole array i.e ("Allen", "Pune") as 0th index
+        ["Sall", "Mumbai"], // for 1st index, it will print this whole array i.e ("Sall", "Mumbai") as 1st index
+    ];
+    document.write(arr[0])
+
+
+#3] If we want to display any particular value inside our array like if at 0th position the array is ["Allen", "Pune"],
+    then "Allen" is at 0th position and "Pune" is at 1st position in array at 0th position.
+    Basically, arr = ["Allen", "Pune"]
+    Array position->  [0][0]    [0][1]
+    CODE ->
+    var arr = [
+        ["Allen", "Pune"], // Array at 0th position
+        ["Sall", "Mumbai"], // Array the 1st position
+        ["Lopes", "Delhi"], // Array at 2nd position
+    ];
+    document.write(arr[0][1]); // it will display array of 0th position and in that array it will display 1st position value, i.e in this case it's Pune
+
+document.write('<br/>')
+
+    document.write(arr[1][0]); // it will display array of 1st position and in that array it will display 0th position value, i.e in this case it's Sall
+
+document.write('<br/>')
+
+    document.write(arr[2][1]); // it will display array of 2nd position and in that array it will display 1st position value, i.e in this case it's Delhi
+
+
+#4] If we want to display the data inside the array in somewhat like table form then,
+    // First we just display all the values inside our array using for loop ->
+    var arr = [
+        ["Allen", "Pune"],
+        ["Sall", "Mumbai"],
+        ["Lopes", "Delhi"],
+    ];
+
+    for(var i = 0; i < 3; i++)
+    {
+        document.write(arr[i]);
+        document.write('<br/>')
+    }
+
+
+    // Now we display all the values as rows and columns ->
+    var arr = [
+        ["Allen", "Pune"],
+        ["Sall", "Mumbai"],
+        ["Lopes", "Delhi"],
+    ];
+
+    for(var i = 0; i < 3; i++) // basically rows or outer loop
+    {
+        for(var j = 0; j < 2; j++) // basically columns or inner loop
+        {
+            document.write(arr[i][j]);
+            document.write('<br/>')
+        }
+    }
+
+
+    // Now for displaying it into table format we add html <table> tag ->
+    var arr = [
+        ["Allen", "Pune"],
+        ["Sall", "Mumbai"],
+        ["Lopes", "Delhi"],
+    ];
+
+    document.write("<table border= 1px>"); // basically the table starts here,
+    document.write("<tr> <td>Sr. No.</td> <td>Name</td> <td>City</td> </tr>") // Adding table row and table data tags and also adding a serial no. column
+    var k = 1; // it is for Sr. No.
+    for(var i = 0; i < 3; i++) // basically rows or outer loop
+    {
+        document.write("<tr>"); // New table row starts here
+        document.write("<td>"+k+"</td>") // For printing sr. no. one by one
+        for(var j = 0; j < 2; j++) // basically columns or inner loop
+        {
+            document.write("<td>"+arr[i][j]+"</td>"); // printing the output of our array inside table data
+        }
+        k++; // incrementing serial no.
+        document.write("</tr>");
+    }
+    document.write("</table>");
