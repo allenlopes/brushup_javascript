@@ -1,0 +1,103 @@
+#1] The problems with variables is that at a time we can store only single value, and if we want to store more values,
+    we need to create more variables which might be time consuming.
+
+
+#2] If we want to store multiple information at a time, we use Arrays.
+
+
+#3] Ways to make an array ->
+    1st Way -
+        var name = ["Allen", "Sall"]; // it is an array of variable name which consists of 2 values
+        document.write(name);
+
+    2nd Way -
+        var name = new Array("Allen", "Sall");
+        document.write(name);
+
+    From both of the ways to make an array, mostly the 1st way is preferred the most, so we will also use the 1st way.
+
+
+#4] If suppose an array consists of many string values, like atleast 10 values, and we want to just display an particular value,
+    so we will give the index position of that value.
+    * Note - The index position of the values inside an array starts from 0 and upto n..
+    For ex. array = ["Allen", "Sall", "Kal", "Atomic", "Potter"]
+Index positions->       0       1       2       3          4
+
+        var arr = ["Allen", "Sall", "Atomic", "Money"];
+        document.write(arr[0]); // it will display the array at index position 0 i.e output will be "Allen"
+
+    document.write('<br/>')
+
+        var arr = ["Allen", "Sall", "Atomic", "Money"];
+        document.write(arr[2]); // it will display the array at index position 1 i.e output will be "Atomic"
+
+    document.write('<br/>')
+
+        *Note - if we have array of size 4 and we print the array at index position 5 or 8 or etc.. it will give the output as "undefined"
+        var arr = ["Allen", "Sall", "Atomic", "Money"];
+        document.write(arr[5]); // it will display the output as "Undefined" since array is of size 4 only, and we have called the value at index position 5, which is not there in our array.
+
+
+#5] If we first define our array and want to put data inside our array later on we can also do it.
+        var arr = [];
+        arr[0] = "Allen";
+        arr[1] = "Sall";
+        document.write(arr);
+
+
+#6] Note that it is not important to put data of similar data type inside our array, it could be of different data types too.
+        var arr=[]
+        arr[0] = "Allen";
+        arr[1]= 23;
+        document.write(arr);
+
+
+#7] Using for loop to display elements or values inside our array.
+        var arr = ["Allen", "Sall"];
+        for(var i = 0; i < 2; i++)
+        {
+            document.write(arr[i]);
+            document.write(" ");
+        }
+
+
+
+#8] Suppose we want to create a dropdown like this, so in html we will create it like this,
+        <select>
+            <option>Select City</option>
+            <option>Agra</option>
+            <option>Mumbai</option>
+            <option>Delhi</option>
+        </select>
+
+    And for the above dropdown if we have large number of values, like 100 - 500 and we want to sort them out, or
+    want to change the particular city name, so it would be very time consuming for us to change one by one or sort the entire
+    dropdown in alphabetical order.
+    So, here we can make use of array, let's see it how,
+        var arr = ["Delhi", "Agra", "Mumbai", "Bengaluru"];
+        var html = "<select><option>Select City</option>" // created a variable to start with html dropdown
+        for( var i = 0; i < 4; i++)
+        {
+            html = html+"<option>"+arr[i]+"</option>";
+
+        }
+        html = html+"</select>" // here basically we end the html dropdown section
+        document.write(html);
+
+    Suppose we want to sort the data alphabetically inside our dropdown, then we can, just add the sort() function,
+        var arr = ["Delhi", "Agra", "Mumbai", "Bengaluru"];
+        arr.sort(); // here we have added the sort function
+        var html = "<select><option>Select City</option>" // created a variable to start with html dropdown
+        for( var i = 0; i < 4; i++)
+        {
+            html = html+"<option>"+arr[i]+"</option>";
+
+        }
+        html = html+"</select>" // here basically we end the html dropdown section
+        document.write(html);
+
+
+Because of using array for dropdown, it helps us in inserting multiple values hassle free and to sort the items hassle free.
+
+
+

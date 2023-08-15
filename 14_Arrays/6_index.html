@@ -1,0 +1,28 @@
+<script>
+//
+/*
+var arr = ["Delhi", "Agra", "Mumbai", "Bengaluru"];
+var html = "<select><option>Select City</option>" // created a variable to start with html dropdown
+for( var i = 0; i < 4; i++)
+{
+    html = html+"<option>"+arr[i]+"</option>";
+
+}
+html = html+"</select>" // here basically we end the html dropdown section
+document.write(html);
+*/
+
+// We are sorting our array to be displayed in alphabetical order inside our dropdown
+var arr = ["Delhi", "Agra", "Mumbai", "Bengaluru"];
+arr.sort();
+var html = "<select><option>Select City</option>" // created a variable to start with html dropdown
+for( var i = 0; i < 4; i++)
+{
+    html = html+"<option>"+arr[i]+"</option>";
+
+}
+html = html+"</select>" // here basically we end the html dropdown section
+document.write(html);
+
+
+</script>
