@@ -1,0 +1,52 @@
+<script>
+
+// Using forin loop inside our object ->
+/*
+var obj = {
+    name: 'Allen',
+    age: 20,
+    mobile: 9392939194
+}
+for(var key in obj){ // for in loop to display all the key values inside our obj (Basically key values are- name, age, mobile)
+    document.write(key);
+    document.write('<br/>');
+}
+*/
+
+
+
+// displaying key along with it's value ->
+/*
+var obj = {
+    name: 'Allen',
+    age: 20,
+    mobile: 9392939194
+}
+for(var key in obj){ // for in loop to display all the key values inside our obj (Basically key values are- name, age, mobile)
+    // displaying key along with it's value
+    document.write(key+" - "+obj[key]);
+    document.write('<br/>');
+}
+*/
+
+
+
+// creating an table and displaying key along with it's value
+var obj = {
+    name: 'Allen',
+    age: 20,
+    mobile: 9392939194
+}
+document.write('<table border="1px">')
+for(var key in obj){ // for in loop to display all the key values inside our obj (Basically key values are- name, age, mobile)
+    // displaying key along with it's value inside our table,
+    document.write('<tr>');
+    document.write('<td>'+key+'<td/>'); // displaying key
+    document.write('<td>'+obj[key]+'<td/>'); // displaying value
+    document.write('<tr/>');
+}
+document.write('</table>');
+
+
+
+</script>
