@@ -1,0 +1,21 @@
+<script>
+
+// creating an function inside our object array i.e arr which will display name and surname together.
+        var arr = {
+        name: "Allen",
+        surname: "Lopes",
+        age: 20,
+        city: ["Delhi", "Mumbai"],
+        education: {
+            pg:"M.Tech",
+            ug:"B.Tech",
+        },
+        // function inside our object array
+        fullname: function(){
+            return "Allen Lopes";
+        }
+    };
+    // calling function which is inside our object array to displat the name and surname
+    document.write(arr.fullname());
+
+</script>

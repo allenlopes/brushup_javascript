@@ -1,0 +1,19 @@
+<script>
+// creating an array which is inside our object array to be used inside our function which will display name and surname array created inside our object array.
+        var arr = {
+        name: "Allen", // use this inside our function array
+        surname: "Lopes", // use this inside our function array
+        age: 20,
+        city: ["Delhi", "Mumbai"],
+        education: {
+            pg:"M.Tech",
+            ug:"B.Tech",
+        },
+        // function inside our object array in which the outside array is to be used
+        fullname: function(){
+            return this.name+" "+this.surname; // basically we use 'this' to access an variable or array inside our function.
+        }
+    };
+    // calling function which is inside our object array to display called name and surname array.
+    document.write(arr.fullname());
+</script>

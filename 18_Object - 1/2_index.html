@@ -1,0 +1,18 @@
+<script>
+
+// Creating an object array inside an object array
+        var arr = {
+        name: "Allen",
+        surname: "Lopes",
+        age: 20,
+        city: ["Delhi", "Mumbai"],
+        education: {
+            pg:"M.Tech",
+            ug:"B.Tech",
+        }
+    };
+    document.write(arr.education); // it will just display the output as [object Object]
+    document.write('<br/>');
+    // if we want to retrieve data from education which is an object array then, we do -
+    document.write(arr.education.ug);
+</script>
