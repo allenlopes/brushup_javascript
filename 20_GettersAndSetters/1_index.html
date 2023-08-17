@@ -1,0 +1,18 @@
+<script>
+    var obj = {
+        fname: "Allen",
+        lname: "Lopes",
+
+        get getFullName(){
+            return this.fname+" "+this.lname;
+        },
+
+        set setFullName(par) {
+            this.fname = par.fn;
+            this.lname = par.ln;
+        }
+    }
+
+    obj.setFullName={fn:"Sall",ln:"Dmello"};
+    document.write(obj.getFullName);
+</script>
