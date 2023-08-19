@@ -1,0 +1,76 @@
+#1] We create 2 object variables,
+    var obj1 = {
+        fname: "Allen",
+        lname: "Lopes"
+    };
+
+    var obj2 = {
+        fname: "Sall",
+        lname: "Dmello"
+    }
+
+    The problem here is suppose if we want to create more object variables like for 10-20 times, then we have to again and again,
+    write the same obj variables, like if we want to create obj3 then,
+    var obj3 = {
+        fname: "qwert",
+        lname: "zxcv"
+    }
+    .
+    .
+    .
+    .Same var for obj4, obj5, obj6 and etc..
+
+    Here we use the constructor which makes it easier for usand reduces lines of code.
+
+
+#2] When we create constructor we have to give the first letter of the function name as capital,
+    like for example,
+    function User(){      // so here the function User has first letter as capital.
+
+    }
+
+
+#3] So we create a constructor like this,
+
+function User(fn, ln){
+    //Here we assign the value to constructor
+    this.fname = fn;
+    this.lname = ln;
+}
+
+
+#4] Now, we are creating object thorugh constructor,
+    // here we are creating an object and assigning values to it
+    var obj = new User("Allen", "Lopes");
+    console.log(obj); // it will print the obj values inside our console on browser
+
+    # The main benefit of constructor is that we can now just create new object with another name and assign new values to it
+    and print it, like we create object 2
+    var obj2 = new User("Sall", "Dmello");
+    console.log(obj2); // it will print the obj2 values inside our console on browser
+
+
+#5] Suppose we want to add another property inside our object but without modifing the constructor, so we can add it by
+    just modifing the object.
+    Like suppose we have,
+    var obj2 = new User("Sall", "Dmello");
+    console.log(obj2); // it will print the obj2 values inside our console on browser
+    // now we want to add another property of 'age', so we can add it by,
+    obj2.age = 20;
+
+    * Note that the new property 'age' was just added to obj2 and it won't affect any other property other then obj2.
+
+
+#6] Let's see how we create a function inside our constructor,
+    <script>
+    function User(fn, ln){
+        this.fname = fn;
+        this.lname = ln;
+        // executing through function
+        this.fullname = function(){
+            return this.fname+" "+this.lname;
+        }
+    }
+        // creating an object
+        var obj = new User("Sal", "Dmello");
+        console.log(obj); // it will print the obj2 values inside our console on browser

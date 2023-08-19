@@ -1,0 +1,17 @@
+<script>
+function User(fn, ln){
+    this.fname = fn;
+    this.lname = ln;
+    // executing through function
+    this.fullname = function(){
+        return this.fname+" "+this.lname;
+    }
+}
+
+
+// Creating an object,
+    var obj = new User("Sal", "Dmello");
+    console.log(obj); // it will print the obj2 values inside our console on browser
+
+
+</script>
