@@ -1,0 +1,105 @@
+#1] Math object is an predefined object in javascript, and with the help of it we can perform mathematical tasks can be performed.
+    1. Math.round()
+    2. Math.ceil()
+    3. Math.floor()
+    4. Math.trunc()
+    5. Math.pow()
+    6. Math.sqrt()
+    7. Math.abs()
+    8. Math.min()
+    9. Math.max()
+    10. Math.random()
+    11. Math.log()
+
+
+
+#2] 1. Math.round() -> Basically it rounds up the floating number upto it's closest integer number,
+    Like if we gave number 10.5, so Math.round function will round it up to number 11,
+    Or, if number is 13.3, then it will round it up to it's closest integer i.e 13
+    Code eg, ->
+    var x = 13.3;
+    document.write(Math.round(x));
+
+
+    2. Math.ceil() -> Basically it will round up the floating number to it's next integer number,
+    Like if we gave number 11.2, it will round it to number 12, even though 11.2 is closer to 11, then too it will round
+    it up to it's next integer.
+    Code eg, ->
+    var x = 11.2;
+    document.write(Math.ceil(x));
+
+
+    3. Math.floor() -> Basically it's just opposite of Math.ceil() function, it rounds up the floating number to it's integer number,
+    Like if we gave number 11.9, it will round it to number 11, even though 11.9 is closer to 12, then too it will round
+    it upto it's integer only.
+    Code eg, ->
+    var x = 11.9;
+    document.write(Math.floor(x));
+
+
+    4. Math.trunc() -> It works same as Math.floor() function, like whatever the integers would be there after . in an
+    floating number it ignores them and print just the number,
+    Like if we gave number 23.999, it will remove the .999 number and give the output as 23.
+    Code eg, ->
+    var x = 23.999;
+    document.write(Math.trunc(x));
+
+
+    5. Math.pow() -> Basically it means power of number, it gives the output by calculating the power of that number,
+    Here we have to put 2 numbers in the function in which 1st number is the number and 2nd number is it's power,
+    Like it works as Math.pow(3,2), which means 3^2 i.e 3's square which will give output as 9, OR
+    Math.pow(4,3), which means 4^2 i.e 4's cube which will give output as 64.
+    Code eg, ->
+    document.write(Math.pow(4,3));
+
+
+    6. Math.sqrt() -> It removes the square root of a given number,
+    Like if given number is 25, so it removes it's square root and give output as 5, which is square root of 25.
+    Code eg, ->
+    document.write(36)
+
+
+    7. Math.abs() -> It gives the inputed negative number as positive number in output,
+    Like if given number is -99.192, so it gives the output in positive number as 99.192.
+    Code eg, ->
+    var x = -10.999
+    document.write(Math.abs(x));
+
+
+    8. Math.min() -> Here we give input as series of numbers,
+    Like if give give numbers as 20, 7, 23, 2 as input, it will give the output of the minimum number from it, i.e 2
+    Code eg, ->
+    document.write(Math.min(20, 7, 23, 2));
+
+
+    9. Math.max() -> Here we give input as series of numbers,
+    Like if give give numbers as 20, 7, 23, 2 as input, it will give the output of the maximum number from it, i.e 23
+    Code eg, ->
+    document.write(Math.max(20, 7, 23, 2));
+
+
+    10. Math.random() -> When we use this function, it will Basically give us any random numbers output
+    whenever we refresh the page, without giving any input numbers to it,
+    Like it will display output as any random numbers,
+    Code eg, ->
+    document.write(Math.random())
+
+    // The random numbers which are displaying are in Basically floating numbers, like 0.3453434 or 0.255432 etc..
+    To make it proper integer positive number we can multiply the random number generated with power of 10,
+    Code eg, ->
+    var x = Math.random()*1000;
+    document.write(x)
+
+    // But the above number generated is also into integer number, like 9.2345 or 5.345654, etc..
+    To make it proper integer number without any decimal point numbers, we can use our Math.trunc() function.
+    Code eg, ->
+    var y = Math.random()*1000;
+    document.write(Math.trunc(x));
+
+
+    11. Math.log() -> It helps in removing log of a number,
+    Like if we want log of number 23, we can use Math.log() function, then it outputs the log of number 23(but in decimal point number)
+    Since, it displays the log of 23 in decimal point number, we can make use of Math.trunc() function to remove decimal point,
+    and display output as integer number.
+    Code eg, ->
+    document.write(Math.log(10));
