@@ -1,0 +1,16 @@
+<script>
+    function User(fn, ln){
+        this.fname = fn;
+        this.lname = ln;
+    }
+
+    // creating a function using prototype
+    User.prototype.fullname = function(){
+        return this.fname+" "+this.lname;
+    }
+
+    var obj = new User("Allen", "Lopes");
+    // accessing the function created inside prototype
+    console.log(obj.fullname());
+
+</script>

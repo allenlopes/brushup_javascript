@@ -1,0 +1,51 @@
+#1] If we want to add property through constructor we have 2 ways,
+    # 1st -> is to add inside our constructor function,
+    function User(fn, ln){
+        this.fname = fn;
+        this.lname = ln;
+    // adding new property inside our constructor function which will give value of the property to all the objects.
+        this.age = 10;
+    }
+
+    // objects
+    var obj = new User("Allen", "Lopes");
+    console.log(obj);
+
+    var obj2 = new User("Sall", "Dmello");
+    console.log(obj2);
+
+
+    # 2nd -> through prototype.
+    function User(fn, ln){
+        this.fname = fn;
+        this.lname = ln;
+    }
+    // adding new property to constructor using prototype which will also give value of the property to all the objects.
+    User.prototype.age = 20;
+
+    // objects
+    var obj = new User("Allen", "Lopes");
+    console.log(obj);
+
+    var obj2 = new User("Sall", "Dmello");
+    console.log(obj2);
+
+
+#2] When we program in real world, we need to edit our code in future, so prototype can be used to edit the value or property outside our constructor,
+    which won't affect the inside working of our constructor function.
+
+
+#3] Creating a function using prototype,
+    function User(fn, ln){
+        this.fname = fn;
+        this.lname = ln;
+    }
+
+    // creating a function using prototype
+    User.prototype.fullname = function(){
+        return this.fname+" "+this.lname;
+    }
+
+    var obj = new User("Allen", "Lopes");
+    // accessing the function created inside prototype
+    console.log(obj.fullname());

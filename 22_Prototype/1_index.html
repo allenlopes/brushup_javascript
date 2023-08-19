@@ -1,0 +1,15 @@
+<script>
+    function User(fn, ln){
+        this.fname = fn;
+        this.lname = ln;
+    }
+    // adding new property to constructor using prototype which will also give value of the property to all the objects.
+    User.prototype.age = 20;
+
+// objects
+    var obj = new User("Allen", "Lopes");
+    console.log(obj);
+
+    var obj2 = new User("Sall", "Dmello");
+    console.log(obj2);
+</script>
