@@ -1,0 +1,83 @@
+#1] In javascript what happens is if we first call the function and then define it, it won't give an error.
+    Like for eg, ->
+    // calling a function before defining it.
+    hello(); // here we have called the function
+    // and then we defined it,
+    function hello(){
+        document.write("Hey Allen");
+    }
+
+    But, when we define a function in a variable and try to call the variable even before defining it, then it will give error.
+    Like for eg, ->
+    // calling a function through variable before defining it.
+    hello(); // here we have called the variable
+    // and then defined it,
+    var hello = function() {
+        document.write("Hey World!");
+    }
+
+
+#2] Suppose we define the value of x and then print it, it will give the output, like for eg,
+    var x = 10;
+    document.write(x);
+
+    But, what if we just print x? Like,
+    document.write(x);
+    It wil give us an error as "x is not defined" in our console.
+
+    But, what if we call x first and then define it? Like,
+    document.write(x);
+    var x = 10;
+    It will give us the output as "undefined" on our screen
+
+
+#3] Here, what happens is When, we call the variable first and then define it,
+    Like,
+    document.write(x);
+    var x = 10;
+    In the background working of javascript,
+    var x;
+    x = "undefined"
+    and then it prints the x in,
+    document.write(x);
+
+    So, that's why we get the output as undefined.
+
+
+#4] If we have made an variable, and just defined it and not inserted any value in it,
+    Like,
+    var x;
+    document.write(x)
+    Or Else,
+    if we have made an variable and also inserted some value in it but called it before,
+    Like,
+    document.write(x);
+    var x = 10;
+    then for bothe the cases we will get output as "undefined"
+
+
+#5] Suppose if we call x first and then have defined the value to it, but without giving any variable name(like - var, const, let)
+    Like,
+    document.write(x);
+    x = 10;
+    In this case it will display error as "x is not defined" inside our console.
+# When we haven't given any variable name to x i.e var, let, const; then it will give such error.
+
+
+#6] Same thing we have done earlier in 2_index.html, tried to call the variable as if it's function,
+    that's why it gave error in our console.
+
+
+#7] When we first define value of x without giving it variable name(var, let, const) and then print it,
+    it won't give an error.
+    Like,
+    x = 10;
+    document.write(x);
+
+    But,
+    if we write "use strict" inside our program, it will give us an error in our console as "x is not defined"
+    Basically "use strict" means it tells us that we have to compulsory tell the variable(var, let, const) we have to use,
+    Like,
+    "use strict"
+    x = 10;
+    document.write(x)
