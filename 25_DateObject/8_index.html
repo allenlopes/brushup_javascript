@@ -1,0 +1,6 @@
+<script>
+    var arr = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+    var d = new Date();
+    d.setDate(d.getDate()+2) // means it will display what will be 2 days after today
+    document.write(arr[d.getDay()-1]);
+</script>
