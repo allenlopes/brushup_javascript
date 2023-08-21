@@ -1,0 +1,61 @@
+#1] Events means when activity is performed from user's end.
+
+
+#2] Suppose we have alert in our script tag
+    Like,
+    alert('Hello');
+
+
+#3] We want that alert to be come once user clicks or hovers on a particular word or sentence in display page,
+    the alert box should appear.
+    Like,
+    alert('Hello');
+    <div>Hello</div>
+
+
+#4] We have different events in javascript ->
+    1. click onClick
+    2. double click ondblclick
+    3. right click oncontextmenu
+
+
+#5] # 1. click onClick ->
+Code ->
+<script>
+
+function callHello(){
+    alert("Heyy");
+}
+
+</script>
+
+<div onclick="callHello()">Hello</div> // when someone click on text 'Hello' it calls the function callHello() inside <script> tag and we get an alert box.
+
+
+    # 2. double click ondblClick ->
+Code ->
+<script>
+
+function callHello(){
+    alert("Doubled Clicked broo");
+}
+
+</script>
+
+<div ondblclick="callHello()">Hello</div> // when user double clicks on text 'Hello' it calls the function callHello() inside <script> tag and we get an alert box.
+
+
+    # 3. right click oncontextmenu ->
+Code ->
+<script>
+
+function callHello(){
+    alert("Right Clicked broo");
+}
+
+</script>
+
+<div oncontextmenu="callHello()">Hello</div> // when user right clicks on text 'Hello' it calls the function callHello() inside <script> tag and we get an alert box.
+
+
+    # 4.
