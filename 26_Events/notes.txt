@@ -58,4 +58,42 @@ function callHello(){
 <div oncontextmenu="callHello()">Hello</div> // when user right clicks on text 'Hello' it calls the function callHello() inside <script> tag and we get an alert box.
 
 
-    # 4.
+    # 4. key press onkeypress
+Code ->
+<html>
+    <head>
+        <script>
+
+        function callHello(){
+            alert("Keyboard key Clicked broo");
+        }
+
+        </script>
+    </head>
+
+    <body onkeypress="callHello()"> // whenever we press any key on our keyboard then, 'onkeypress' will call the callHello() function from the <script> tag.
+        <div>Hello</div>
+    </body>
+</html>
+
+
+    # 5. key up onkeyup
+Code ->
+<html>
+    <head>
+        <script>
+
+        function callHello(){
+            alert("Keyboard key Clicked broo");
+        }
+        </script>
+
+    </head>
+
+    <body onkeyup="callHello()"> // whenever we press any key on keyboard and then leave it, then only 'onkeyup' calls the callHello() function from the <script> tag.
+        <div>Hello</div>
+    </body>
+</html>
+
+
+    # 6. mouse hover onmouseover
