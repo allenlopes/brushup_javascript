@@ -97,3 +97,36 @@ Code ->
 
 
     # 6. mouse hover onmouseover
+Code ->
+<html>
+    <head>
+        <script>
+        function callHello(){
+            alert("Mouse hover over Hello broo");
+        }
+        </script>
+
+    </head>
+
+    <body >
+        <div onmouseover="callHello()">Hello</div> // whenever user hovers mouse on Hello text, then 'onmouseover' will call the callHello() function from the <script> tag.
+    </body>
+</html>
+
+
+    7. mouse out onmouseout
+Code ->
+<html>
+    <head>
+        <script>
+        function callHello(){
+            alert("Mouse out broo");
+        }
+        </script>
+
+    </head>
+
+    <body >
+        <div onmouseout="callHello()">Hello</div> // whenever user hovers on Hello text, and then removes hover then the onmouseout is called.
+    </body>
+</html>
