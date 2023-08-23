@@ -1,0 +1,12 @@
+#1] Document Object Model(Also known as DOM) is an interface, and with DOM we can perform
+    4 operations on our HTML attribute and element,
+    1. get
+    2. set
+    3. add
+    4. delete
+
+
+#2] With DOM any HTML tag or attribute value can be retrieved(get), value can be be set, add something, delete something.
+
+
+#3]
