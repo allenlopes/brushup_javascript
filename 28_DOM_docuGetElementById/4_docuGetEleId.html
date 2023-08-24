@@ -1,0 +1,18 @@
+Num1 <input type="text" id="num1" /> <br/><br/>
+Num2 <input type="text" id="num2" /> <br/><br/>
+
+<input type="button" onclick="getData()" value="Click Me" />
+
+<div id="result"></div>
+
+<script>
+
+function getData() {
+    let num1 = parseInt(document.getElementById('num1').value); // we are using parseInt so that the input we got is converted to integer
+    let num2 = parseInt(document.getElementById('num2').value);
+    // setting value
+    document.getElementById('result').innerHTML = num1 + num2;
+
+}
+
+</script>
