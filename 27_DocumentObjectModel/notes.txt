@@ -9,4 +9,38 @@
 #2] With DOM any HTML tag or attribute value can be retrieved(get), value can be be set, add something, delete something.
 
 
-#3]
+#3] For the following basic html page code ->
+
+<html>
+    <head>
+        <title>My Page</title>
+    </head>
+    <body>
+        <div>
+            <h1>Allen</h1>
+        </div>
+        <div>
+            <p></p>
+            Num1 <input type="text" id="num1"/>
+            Num2 <input type="text" id="num2"/>
+            <input type="submit" />
+        </div>
+    </body>
+</html>
+
+Let's see how it's Document Object Model is,
+Hierarchy of Document Object Model ->
+    document
+        html
+            head
+                title
+            body
+                div1
+                    h1
+                div2
+                    p
+                    input1
+                    input2
+                    input3
+
+Whenever we want to manipulate on our page we can do it with the help of Document Object Model(DOM).
