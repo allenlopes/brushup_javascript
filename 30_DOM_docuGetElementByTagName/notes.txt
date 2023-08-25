@@ -1,0 +1,17 @@
+#1] If in our HTML we don't have class and id then we use TagName.
+
+#2] We can use 'TagName' to print the elements inside our tag,
+Code ->
+<div> Sall </div>
+<div> Allen </div>
+<div> Lopes </div>
+
+<script>
+    let name = document.getElementsByTagName('div'); // here we have specified the tag name 'div'.
+    console.log(name); // it will give us output in our console as HTMLCollections of 3 div tags.
+</script>
+
+Suppose if we just want to print first <div> tag we specify it as index position 0 while printing in our console,
+Like, ->
+console.log(name[0])
+Full code ->

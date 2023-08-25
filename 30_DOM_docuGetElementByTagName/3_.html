@@ -1,0 +1,13 @@
+<div> Sall </div>
+<div> Allen </div>
+<div> Lopes </div>
+
+<script>
+    let name = document.getElementsByTagName('div');
+    // if we want to just print the value inside our div tag inside our console and not the whole div then we use innerHTML.
+    // we can use for loop to print all the values one by one inside our console.
+    for(var i = 0; i<name.length; i++)
+    {
+        console.log(name[i].innerHTML); // it will display us output as all the three values inside our <div> tag because we've use innerHTML.
+    }
+</script>

@@ -1,0 +1,24 @@
+<div id="first">
+    <div> Sall </div>
+    <div> Allen </div>
+    <div> Lopes </div>
+</div>
+
+<div id="test">
+    <div> John </div>
+    <div> Albert </div>
+    <div> Doe </div>
+</div>
+
+<script>
+/*
+    Suppose we want to just remove data of div with id="test"
+*/
+    let divId = document.getElementById('test');
+    // here now we have used divId instead of document in the next line,
+    let name = divId.getElementsByTagName('div');
+    for(var i = 0; i< name.length; i++)
+    {
+        console.log(name[i].innerHTML);
+    }
+</script>
