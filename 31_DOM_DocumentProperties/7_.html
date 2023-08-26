@@ -1,0 +1,29 @@
+<html>
+
+    <head>
+        <title> My Page </title>
+    </head>
+
+    <body>
+        <a href="abc.com"> Heyyy </a>
+        <a href="xyz.com"> Heyyy1 </a>
+    </body>
+
+        <script>
+//            console.log(document.links); // document.link gives us collection of link's present in our document, if there's no link it gives length as 0, and here in this html code case we have 2 link tag, which will give the collection length as 2 in console.
+
+//            console.log(document.links[0]); // it will only display me the link at index position 0, i.e the first link with href as abc.com, in our console
+
+        let count = document.links;
+//        console.log(count.length); // it will just display the count of links in our html, like it's 2 in this case so it will display output as 2 in our console.
+
+        for(let x = 0; x < count.length; x++) // this for loop will display the links present in this html code.
+        {
+            console.log(document.links[x]);
+        }
+
+
+        </script>
+
+
+</html>
