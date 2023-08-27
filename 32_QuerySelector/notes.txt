@@ -91,3 +91,24 @@
     console.log(name);
 
 </script>
+
+
+#7] Using for loop and innerHTML to print data inside our tag
+
+
+<p class="box"> Allen </p>
+
+<p class="box"> Hello </p>
+
+<p class="box"> Sall </p>
+
+
+<script>
+    let name= document.querySelectorAll('.box');
+    // Returning value inside class box by using loop
+    let count = name.length;
+    for(let x = 0; x < count; x++)
+    {
+        console.log(name[x].innerHTML); // by using .innerHTML it will just print the values inside the <p> tag inside our console.
+    }
+</script>
