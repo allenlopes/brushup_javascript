@@ -41,3 +41,53 @@
     console.log(name);
 
 </script>
+
+
+#6] Suppose we have different <div> tag with same class name, and we console it with querySelector, but it will just give
+    the output of first class,
+    Like with code ex, ->
+<div>
+    <p class="box"> Hello </p> // class 1 with name box
+</div>
+
+    <p class="box"> Allen </p> // class 2 with name box
+
+<script>
+
+    let name = document.querySelector('.box'); // it will only display the class 1 with name box
+    console.log(name);
+
+</script>
+
+<!-- So, to print all the class with same name, we use 'querySelectorAll' -->
+
+<!--
+<div>
+    <p class="box"> Hello </p> // class 1 with name box
+</div>
+
+    <p class="box"> Allen </p> // class 2 with name box
+
+<script>
+
+    let name = document.querySelectorAll('.box'); // here we have used querySelectorAll so, it will display all class with name box.
+    console.log(name);
+
+</script>
+-->
+
+
+<!-- To print just the box inside <p> tag which is inside <div> tag we specify it -->
+
+<div>
+    <p class="box"> Hello </p> <!-- class 1 with name box in <div> tag -->
+</div>
+
+    <p class="box"> Allen </p> <!-- class 2 with name box outside <div> tag -->
+
+<script>
+
+    let name = document.querySelectorAll('div p.box'); // here we have specified that we need to print class box which is inside p tag which is inside div tag
+    console.log(name);
+
+</script>
