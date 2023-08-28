@@ -1,0 +1,89 @@
+#1] Traversing means basically if we have html lists, and we want the data of the first element in the list,
+    so we traverse.
+
+    1. firstElementChild
+    2. lastElementChild
+    3. children
+    4. parentElement
+    5. nextElementSibling AND previousElementSibling
+
+#2] 1. firstElementChild
+    2. lastElementChild
+Like suppose code ->
+<ul id="box">
+    <li> Allen </li>
+    <li> Sall </li>
+    <li> Lopes </li>
+</ul>
+
+<script>
+    let name = document.getElementById("box");
+    // console.log(name.firstElementChild); // will give output of first element inside our <ul> tag     <li> Allen </li>
+    // console.log(name.lastElementChild); // will give output of last element inside our <ul> tag i.e     <li> Lopes </li>
+
+    console.log(name.lastElementChild.innerHTML); // will give the output of value inside the last element inside <ul> tag i.e Lopes
+</script>
+
+
+#3]  3. children
+Like suppose code ->
+<ul id="box">
+    <li> Allen </li>
+    <li> Sall </li>
+    <li> Lopes </li>
+</ul>
+
+<script>
+    let name = document.getElementById("box");
+
+    // console.log(name.children); // it will give the output of list inside <ul> tag in form of collections, so we need to specify the index position to output particular <li> tag
+    // console.log(name.children[0]); // it will output the list <li> tag at index position 0 which will give output as,     <li> Allen </li>
+    console.log(name.children[1]); // it will output the list <li> tag at index position 1 which will give output as,     <li> Sall </li>
+
+</script>
+
+
+#4] 4. parent
+Code understanding ->
+<ul id>
+    <li> Allen </li>
+    <li id="box"> Sall </li>
+    <li> Lopes </li>
+</ul>
+
+<script>
+    let name = document.getElementById("box");
+    console.log(name.parentElement); /* As we can see we have given id="box" inside our <ul> tag's <li> tag but <li> is an
+        child element to <ul> tag, so when we want to call the whole <ul> tag with the help of id="box" inside our <li>
+        tag then we can use .parentElement, basically children se parents nikalna  */
+</script>
+
+
+#5] 5. nextElementSibling AND previousElementSibling
+Code understanding ->
+<ul id>
+    <li> Allen </li>
+    <li id="box"> Sall </li>
+    <li> Lopes </li>
+</ul>
+
+<script>
+    let name = document.getElementById("box");
+
+    /*console.log(name.nextElementSibling); /* As we can see we have given id="box" inside our <ul> tag's <li> tag with value 'Sall' <li> is an
+        child element to <ul> tag, so when we want to call the nextSibling(next <li> tag) or previousSibling(previous <li> tag),
+        we use nextElementSibling and previousElementSibling to call them,
+        here we have used nextElementSibling which will output just the next element i.e output will be,  <li> Lopes </li>
+        basically ek sibling se dusre sibling ko call karna */
+
+
+    console.log(name.previousElementSibling); /* As we can see we have given id="box" inside our <ul> tag's <li> tag with value 'Sall' <li> is an
+        child element to <ul> tag, so when we want to call the nextSibling(next <li> tag) or previousSibling(previous <li> tag),
+        we use nextElementSibling and previousElementSibling to call them,
+        here we have used previousElementSibling which will output just the previous element i.e output will be,  <li> Allen </li>
+        basically ek sibling se dusre sibling ko call karna */
+</script>
+
+
+#6]
+Code understanding ->

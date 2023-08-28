@@ -1,0 +1,13 @@
+<ul id="box">
+    <li> Allen </li>
+    <li> Sall </li>
+    <li> Lopes </li>
+</ul>
+
+<script>
+    let name = document.getElementById("box");
+    // console.log(name.firstElementChild); // will give output of first element inside our <ul> tag     <li> Allen </li>
+    // console.log(name.lastElementChild); // will give output of last element inside our <ul> tag i.e     <li> Lopes </li>
+
+    console.log(name.lastElementChild.innerHTML); // will give the output of value inside the last element inside <ul> tag i.e Lopes
+</script>
