@@ -112,3 +112,33 @@
         console.log(name[x].innerHTML); // by using .innerHTML it will just print the values inside the <p> tag inside our console.
     }
 </script>
+
+
+#8] If we want to display the class name which is along with the id we can use 'getAttribute'
+Code Understanding ->
+<ul id>
+    <li> Allen </li>
+    <li id="box" class="li_class"> Sall </li>
+    <li> Lopes </li>
+</ul>
+
+<script>
+    let name = document.getElementById("box").getAttribute('class'); // it will display the class name in the console log which is "li_class"
+    console.log(name);
+
+</script>
+
+
+#9] If we want to check if any particular attribute is present or not, we can use 'hasAttribute'
+Code Understanding ->
+<ul id>
+    <li> Allen </li>
+    <li id="box" class="li_class"> Sall </li>
+    <li> Lopes </li>
+</ul>
+
+<script>
+    let name = document.getElementById("box").hasAttribute('class'); // it will display true in console if we have class attribute present, if not present it will display false, here it will display true, since it is present
+    console.log(name);
+
+</script>
