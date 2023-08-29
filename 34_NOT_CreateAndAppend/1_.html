@@ -1,0 +1,19 @@
+<ul id="box">
+    <li> Allen </li>
+    <li> Sall </li>
+    <li> Lopes </li>
+</ul>
+
+<script>
+    let liBox = document.getElementById("box");
+    // adding new <li> tag by creating a new element
+        let newLi = document.createElement("li");
+        //console.log(newLi);
+    // adding the newly created <li> tag inside our <ul> tag
+        //liBox.appendChild(newLi);
+    // adding content inside our newly created <li> tag
+        let liText = document.createTextNode("Bhai Bhai");
+        newLi.appendChild(liText);
+
+        liBox.appendChild(newLi);
+</script>
