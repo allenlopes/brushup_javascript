@@ -1,0 +1,15 @@
+<ul id="box">
+    <li> Allen </li>
+    <li> Saa </li>
+    <li> Lopes </li>
+</ul>
+
+<script>
+
+//removeChild
+let boxElement = document.getElementById('box');
+// we want to remove second <li> tag containing value as "Saa"
+let liBox = boxElement.firstElementChild.nextElementSibling;
+boxElement.removeChild(liBox);
+
+</script>

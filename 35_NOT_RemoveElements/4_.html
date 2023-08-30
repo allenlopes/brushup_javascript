@@ -1,0 +1,17 @@
+<!-- Suppose we have different id's for <li> tags, and we want to remove specific id from it, then -->
+<ul id="box">
+    <li id="li1"> Allen </li>
+    <li id="li2"> Saa </li>
+    <li id="li3"> Lopes </li>
+</ul>
+
+<script>
+
+//removeChild
+let boxElement = document.getElementById('box');
+
+// we want to remove second <li> tag containing value as "Saa"
+let liBox = document.getElementById('li2')
+boxElement.removeChild(liBox);
+
+</script>
