@@ -1,0 +1,18 @@
+<ul id="box">
+    <li> Allen </li>
+    <li> Lopes </li>
+</ul>
+
+<script>
+    let box = document.getElementById('box');
+
+    let li = document.createElement('li');
+    li.textContent = "Saaa";
+
+    // now we are specifying the position at which the new value should be placed inside <ul> tag
+    let pos = box.firstElementChild; // it will select posiiton as "Allen"
+    // console.log(pos);
+    box.insertBefore(li, pos); // basically ( ) bracket data means, (li - kya add karna hai, pos - kis position par karna hai)
+    /* Basically here we are adding values before the first position element i.e "Allen" or we can say here we are adding
+    new value at first. */
+</script>
