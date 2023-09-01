@@ -1,0 +1,14 @@
+<ul id="box">
+    <li> Allen </li>
+    <li> Saa </li>
+    <li> Lopes </li>
+</ul>
+
+<script>
+
+    let box = document.getElementById("box");
+    // we wanto create clone of the above
+    let cloneBox = box.cloneNode(true); // when we include 'true' inside ( ) it will also include the <li> tags inside the <ul> tag
+    // console.log(cloneBox);
+    document.body.appendChild(cloneBox);
+</script>
