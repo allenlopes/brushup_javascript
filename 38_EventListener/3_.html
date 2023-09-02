@@ -1,0 +1,17 @@
+<input type="button" id="btn" class="abcc" value="ab">
+
+<script>
+    let btn = document.getElementById('btn');
+
+    btn.addEventListener('click', function() { // creating function inside addEventListener
+        console.log(this.getAttribute('class')); // here we did .getAttribute('class') means it give the output of the class name we mentioned in <input> tag
+    });
+
+    function test(){
+        console.log('test click')
+    }
+
+    function test1(){
+        console.log('test1 click')
+    }
+</script>

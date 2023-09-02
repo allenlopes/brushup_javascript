@@ -1,0 +1,98 @@
+#1] Like suppose we have code with an input tag and an onclick event where when we click on it, we call a function
+Code ->
+<input type="button" id="btn" onclick="test()" value="ab"> // onclick is mentioned here
+
+<script>
+    function test(){
+        console.log('test click')
+    }
+
+    function test1(){
+        console.log('test1 click')
+    }
+</script>
+
+suppose we gave 2 onclick event inside our same input tag like,
+<input type="button" id="btn" onclick="test()" onclick="test1()" value="ab">
+
+<script>
+    function test(){
+        console.log('test click')
+    }
+
+    function test1(){
+        console.log('test1 click')
+    }
+</script>
+So, in the above code it will only call the function test, since the input tag will take the first occuring onclick event and
+not the second one.
+
+
+
+#2] Event listener is usefull when we give the onclick event through javascript, and with the use of Event listener
+we can give 1 or more same functionsto our event listener.
+We have use .addEventListener in the following code ->
+<input type="button" id="btn" value="ab">
+
+<script>
+    let btn = document.getElementById('btn');
+
+    btn.addEventListener('click', test); // first parameter is event, second paratmeter is event name(function name to be called)
+    btn.addEventListener('click', test1);
+    function test(){
+        console.log('test click')
+    }
+
+    function test1(){
+        console.log('test1 click')
+    }
+</script>
+
+
+#3] We can also make function inside our addEventListener(),
+Like ->
+<input type="button" id="btn" class="abcc" value="ab">
+
+<script>
+    let btn = document.getElementById('btn');
+
+    btn.addEventListener('click', function() { // creating function inside addEventListener
+        console.log(this.getAttribute('class')); // here we did .getAttribute('class') means it give the output of the class name we mentioned in <input> tag
+    });
+
+    function test(){
+        console.log('test click')
+    }
+
+    function test1(){
+        console.log('test1 click')
+    }
+</script>
+
+
+#4] Suppose we click on input button once, so it will call the .addEventListener which in return will call the test function,
+but once it enters the function test(), then the Event Listener phase is removed and if we press again on the same input
+tag, then we basically have no access to Event Listener.
+Code ->
+<input type="button" id="btn" class="abcc" value="ab">
+
+<script>
+    let btn = document.getElementById('btn');
+
+    btn.addEventListener('click', test);
+
+
+
+    function test(){
+        console.log('test click');
+        let btn = document.getElementById('btn');
+        btn.removeEventListener('click', test);
+    }
+
+    function test1(){
+        console.log('test1 click')
+    }
+</script>
+
+(Prefer running the code file named 1_.html and 4_.html and see the difference between their output in console to
+understand removeEventListener properly)

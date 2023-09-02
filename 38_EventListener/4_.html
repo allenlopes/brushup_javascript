@@ -1,0 +1,19 @@
+<input type="button" id="btn" class="abcc" value="ab">
+
+<script>
+    let btn = document.getElementById('btn');
+
+    btn.addEventListener('click', test);
+
+
+
+    function test(){
+        console.log('test click');
+        let btn = document.getElementById('btn');
+        btn.removeEventListener('click', test);
+    }
+
+    function test1(){
+        console.log('test1 click')
+    }
+</script>

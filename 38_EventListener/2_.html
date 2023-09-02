@@ -1,0 +1,15 @@
+<input type="button" id="btn" value="ab">
+
+<script>
+    let btn = document.getElementById('btn');
+
+    btn.addEventListener('click', test); // first parameter is event, second paratmeter is event name(function name to be called)
+    btn.addEventListener('click', test1);
+    function test(){
+        console.log('test click')
+    }
+
+    function test1(){
+        console.log('test1 click')
+    }
+</script>
