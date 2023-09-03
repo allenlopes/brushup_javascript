@@ -1,0 +1,15 @@
+<ul id="box">
+    <li> Allen </li>
+    <li> Saa </li>
+    <li> Lopes </li>
+</ul>
+
+<script>
+    let box = document.getElementById('box');
+    let pos = box.firstElementChild.nextElementSibling; /* we have used .nextElementSibling which means here it is selected
+    the second <li> tag which has value 'Saa' so it will replace 'Saa' with 'Sssss' */
+
+    let li = document.createElement('li');
+    li.textContent = "Sssss";
+    box.replaceChild(li, pos); // in bracket it is (kisse replace karna hai, kisko replace karwana hai)
+</script>

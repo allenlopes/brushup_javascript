@@ -1,0 +1,14 @@
+<ul id="box">
+    <li> Allen </li>
+    <li id="li2"> Saa </li>
+    <li> Lopes </li>
+</ul>
+
+<script>
+    let box = document.getElementById('box');
+    let pos = document.getElementById('li2'); // it will select the <li> tag with id = li2
+
+    let li = document.createElement('li');
+    li.textContent = "loops";
+    box.replaceChild(li, pos); // in bracket it is (kisse replace karna hai, kisko replace karwana hai), basically the value to put in place of that replaced value and the value to be replaced
+</script>

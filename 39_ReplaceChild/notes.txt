@@ -1,0 +1,62 @@
+#1] Replacechild() is used to replace a values we want to,
+Suppose we have <li> tag with values ->
+    <li> Allen </li>
+    <li> Saa </li>
+    <li> Lopes </li>
+For the above we want to replace the first <li> tag's value i.e 'Allen' with 'Ally' so we can use the Replacechild()
+Code ->
+<ul id="box">
+    <li> Allen </li>
+    <li> Saa </li>
+    <li> Lopes </li>
+</ul>
+
+<script>
+    let box = document.getElementById('box');
+    let pos = box.firstElementChild;
+
+    let li = document.createElement('li');
+    li.textContent = "Ally";
+    box.replaceChild(li, pos); // in bracket it is (kisse replace karna hai, kisko replace karwana hai)
+</script>
+
+
+#2] Suppose we want to replace value from <li> tag at position 2,
+Code ->
+<ul id="box">
+    <li> Allen </li>
+    <li> Saa </li>
+    <li> Lopes </li>
+</ul>
+
+<script>
+    let box = document.getElementById('box');
+    let pos = box.firstElementChild.nextElementSibling; /* we have used .nextElementSibling which means here it is selected
+    the second <li> tag which has value 'Saa' so it will replace 'Saa' with 'Sssss' */
+
+    let li = document.createElement('li');
+    li.textContent = "Sssss";
+    box.replaceChild(li, pos); // in bracket it is (kisse replace karna hai, kisko replace karwana hai)
+</script>
+
+
+#3] Suppose we gave 'id' tag inside our <ul> tag to specific <li> tag, so we can directly give it's position
+Code ->
+<ul id="box">
+    <li> Allen </li>
+    <li id="li2"> Saa </li>
+    <li> Lopes </li>
+</ul>
+
+<script>
+    let box = document.getElementById('box');
+    let pos = document.getElementById('li2'); // it will select the <li> tag with id = li2
+
+    let li = document.createElement('li');
+    li.textContent = "loops";
+    box.replaceChild(li, pos); // in bracket it is (kisse replace karna hai, kisko replace karwana hai), basically the value to put in place of that replaced value and the value to be replaced
+</script>
+
+If we have id for <li> tag's or any other tags it would be easy to replace since we just have to specify the id name,
+and if we don't have id mentioned we have to use, firstElementChild, nextElementSibling, etc.. properties to specify
+the position at which we want to change the value.

@@ -1,0 +1,14 @@
+<ul id="box">
+    <li> Allen </li>
+    <li> Saa </li>
+    <li> Lopes </li>
+</ul>
+
+<script>
+    let box = document.getElementById('box');
+    let pos = box.firstElementChild;
+
+    let li = document.createElement('li');
+    li.textContent = "Ally";
+    box.replaceChild(li, pos); // in bracket it is (kisse replace karna hai, kisko replace karwana hai)
+</script>
