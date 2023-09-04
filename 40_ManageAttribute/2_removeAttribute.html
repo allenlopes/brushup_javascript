@@ -1,0 +1,20 @@
+<!-- Here we have 2 buttons, Add & Remove, when we click on Add button it adds the class with classname 'my_class'
+to the div with id="name", and when we click on Remove button it removes the class with classname 'my_class' from the
+div with id="name" -->
+
+<div id="name"> Allen </div>
+<input type="button" onclick="addAttr()" value="Add" >
+<input type="button" onclick="removeAttr()" value="Remove">
+
+<script>
+
+    function addAttr(){
+    let name = document.getElementById('name');
+    name.setAttribute("class","my_class"); // bracket mai values hai (class, class name)
+    }
+
+    function removeAttr(){
+    let name = document.getElementById('name');
+    name.removeAttribute("class","my_class"); // bracket mai values hai (class, class name)
+    }
+</script>

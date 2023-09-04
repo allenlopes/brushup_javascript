@@ -1,0 +1,129 @@
+#1] There are 4 methods of attribute ->
+    1. setAttribute
+    2. getAttribute
+    3. removeAttribute
+    4. hasAttribute
+
+
+#2]
+    1. setAttribute
+<!-- To see the output of this setAttribute we can right click then inspect then Elements -->
+
+<!--
+<div id="name"> Allen </div>
+
+<script>
+
+    // Id ke madat se class set karna hai toh ->
+    let name = document.getElementById('name');
+    name.setAttribute("class","my_class"); // bracket mai values hai (class, class name)
+</script>
+-->
+
+
+
+<!-- Now here we are creating an button, so whenever we click on that button only at that time the class will be set
+to div with id="name" -->
+<div id="name"> Allen </div>
+<input type="button" onclick="addAttr()" value="Add" >
+
+<script>
+
+    function addAttr(){
+    let name = document.getElementById('name');
+    name.setAttribute("class","my_class"); // bracket mai values hai (class, class name)
+    }
+</script>
+
+
+    2. removeAttribute
+<!-- Here we have 2 buttons, Add & Remove, when we click on Add button it adds the class with classname 'my_class'
+to the div with id="name", and when we click on Remove button it removes the class with classname 'my_class' from the
+div with id="name" -->
+
+<div id="name"> Allen </div>
+<input type="button" onclick="addAttr()" value="Add" >
+<input type="button" onclick="removeAttr()" value="Remove">
+
+<script>
+
+    function addAttr(){
+    let name = document.getElementById('name');
+    name.setAttribute("class","my_class"); // bracket mai values hai (class, class name)
+    }
+
+    function removeAttr(){
+    let name = document.getElementById('name');
+    name.removeAttribute("class","my_class"); // bracket mai values hai (class, class name)
+    }
+</script>
+
+
+    3. getAttribute
+<!-- Here we have 3 buttons, Add, Remove & Get, when we click on Add button it adds the class with classname 'my_class'
+to the div with id="name", and when we click on Remove button it removes the class with classname 'my_class' from the
+div with id="name" and when we click on Get button it displays the classname in console.log and if there's no class
+it will display 'null' in console.log -->
+
+<div id="name"> Allen </div>
+<input type="button" onclick="addAttr()" value="Add" >
+<input type="button" onclick="removeAttr()" value="Remove">
+<input type="button" onclick="getAttr()" value="Get">
+
+<script>
+
+    function addAttr(){
+    let name = document.getElementById('name');
+    name.setAttribute("class","my_class"); // bracket mai values hai (class, class name)
+    }
+
+    function removeAttr(){
+    let name = document.getElementById('name');
+    name.removeAttribute("class","my_class"); // bracket mai values hai (class, class name)
+    }
+
+    function getAttr(){
+    let name = document.getElementById('name');
+    console.log(name.getAttribute("class")); // bracket mai values hai (class)
+    }
+</script>
+
+
+    4. hasAttribute
+<!-- Here we have 4 buttons, Add, Remove, Get & has, when we click on Add button it adds the class with classname 'my_class'
+to the div with id="name", and when we click on Remove button it removes the class with classname 'my_class' from the
+div with id="name" and when we click on Get button it displays the classname in console.log and if there's no class
+it will display 'null' in console.log, and when we click on Has button it checks if particular attribute is present
+or not, like if attribute class is present then it will display output as 'true' if it's not present it will display
+output as 'false' -->
+
+<!-- hasAttribute checks and tells us if particular attribute exists or not; It gives output in true and false only -->
+
+<div id="name"> Allen </div>
+<input type="button" onclick="addAttr()" value="Add" >
+<input type="button" onclick="removeAttr()" value="Remove">
+<input type="button" onclick="getAttr()" value="Get">
+<input type="button" onclick="hasAttr()" value="Has">
+
+<script>
+
+    function addAttr(){
+    let name = document.getElementById('name');
+    name.setAttribute("class","my_class"); // bracket mai values hai (class, class name)
+    }
+
+    function removeAttr(){
+    let name = document.getElementById('name');
+    name.removeAttribute("class","my_class"); // bracket mai values hai (class, class name)
+    }
+
+    function getAttr(){
+    let name = document.getElementById('name');
+    console.log(name.getAttribute("class")); // bracket mai values hai (class)
+    }
+
+    function hasAttr(){
+    let name = document.getElementById('name');
+    console.log(name.hasAttribute("class")); // bracket mai values hai (class)
+    }
+</script>

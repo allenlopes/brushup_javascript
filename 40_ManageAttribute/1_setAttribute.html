@@ -1,0 +1,28 @@
+<!-- To see the output of this setAttribute we can right click then inspect then Elements -->
+
+<!--
+<div id="name"> Allen </div>
+
+<script>
+
+    // Id ke madat se class set karna hai toh ->
+    let name = document.getElementById('name');
+    name.setAttribute("class","my_class"); // bracket mai values hai (class, class name)
+</script>
+-->
+
+
+
+<!-- Now here we are creating an button, so whenever we click on that button only at that time the class will be set
+to div with id="name" -->
+<div id="name"> Allen </div>
+<input type="button" onclick="addAttr()" value="Add" >
+
+<script>
+
+    function addAttr(){
+    let name = document.getElementById('name');
+    name.setAttribute("class","my_class"); // bracket mai values hai (class, class name)
+    }
+</script>
+
