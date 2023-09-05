@@ -1,0 +1,94 @@
+#1] 4 types of Adjacent in JavaScript ->
+    1. beforebegin
+    2. afterbegin
+    3. beforeend
+    4. afterend
+
+#2]
+    1] beforebegin ->
+    What beforebegin does is if we have div tag with id="box", it will add the value we have specified, before the
+    div tag with id="box".
+    Code understanding ->
+
+<div id="box">
+    <div> Allen </div>
+</div>
+
+<script>
+    let box = document.getElementById('box');
+    box.insertAdjacentHTML('beforebegin', '<h1>Saa</h1>'); /* in bracket it has 2 parameters (method to be used, value to be put) */
+</script>
+
+// for the above code it will put value 'Saa' which has <h1> tag with it before the <div id="box"> tag,
+it can be imagined as,
+<p> Saa </p> // added value
+<div id="box">,... rest code is same...
+// we can check this by right clicking and then inspect element.
+
+
+    2] beforeend ->
+    What beforeend does is, if we have div tag with id="box", it will add the value we have specified, inside our
+    div tag with id="box" but before ending of our <div>tag.
+    Code understanding ->
+
+<div id="box">
+    <div> Allen </div>
+</div>
+
+<script>
+    let box = document.getElementById('box');
+    box.insertAdjacentHTML('beforeend', '<h1>Saa</h1>'); /* in bracket it has 2 parameters (method to be used, value to be put) */
+</script>
+
+// for the above code it will put value 'Saa' which has <h1> tag with it inside the <div id="box"> tag,
+it can be imagined as,
+<div id="box">
+    <div> Allen </div>
+    <h1> Saa </h1> // added value
+... rest code is same....
+// we can check this by right clicking and then inspect element.
+
+
+    3] afterbegin ->
+    What afterbegin does is, if we have div tag with id="box", it will add the value we have specified, inside our
+    div tag with id="box" at start of our <div> tag and then the rest of the values will be there inside that <div> tag.
+    Code understanding ->
+<div id="box">
+    <div> Allen </div>
+</div>
+
+<script>
+    let box = document.getElementById('box');
+    box.insertAdjacentHTML('afterbegin', '<h1>Saa</h1>'); /* in bracket it has 2 parameters (method to be used, value to be put) */
+</script>
+
+// for the above code it will put value 'Saa' which has <h1> tag with it inside the <div id="box"> tag,
+it can be imagined as,
+<div id="box">
+    <h1> Saa </h1> // added value
+    <div> Allen </div>
+... rest code is same....
+// we can check this by right clicking and then inspect element.
+
+
+    4] afterend ->
+    What afterend does is, if we have div tag with id="box", it will add the value we have specified, after our
+    div tag with id="box" is finished i.e after the end of our <div> tag.
+    Code understanding ->
+<div id="box">
+    <div> Allen </div>
+</div>
+
+<script>
+    let box = document.getElementById('box');
+    box.insertAdjacentHTML('afterend', '<h1>Saa</h1>'); /* in bracket it has 2 parameters (method to be used, value to be put) */
+</script>
+
+// for the above code it will put value 'Saa' which has <h1> tag with it after the <div id="box"> tag has finished,
+it can be imagined as,
+<div id="box">
+    <div> Allen </div>
+</div>
+    <h1> Saa </h1>
+... rest code is same....
+// we can check this by right clicking and then inspect element.
