@@ -1,0 +1,40 @@
+#1] GetElementTag Height and Width basically gives us the Height and Width we have given to the text.
+    We have two types of Height and Width,
+    1. Client Height & Width
+    2. Offset Height & Width
+
+#2] What happens is when we give text a border for styling we sometimes need the actual height and Width of the border
+    we have given to that text, so to remove this we use Client and Offset.
+    In Offset Height & Width we might get little larger values of height & Width than Client Height & Width,
+    because Offset Height & Width considers the border pixels height & Width too, that's why we might get slight
+    larger values of Height & Width in Offset,
+    While,
+    In Client Height & Width we might get little small values of height & Width than Offset Height & Width,
+    because Client Height & Width doesn't considers the border pixels height & Width, that's why we might get slight
+    smaller values of Height & Width in Client,
+
+Code ->
+<div id="box" style="padding: 100px; border: 2px solid #000"> Allen </div>
+
+<script>
+
+    let box = document.getElementById('box');
+
+// Here we are using Client Height and Width
+console.log('Client');
+    let clwidth = box.clientWidth;
+    let clheight = box.clientHeight;
+
+    console.log(clwidth);
+    console.log(clheight);
+
+
+// Here we are using Offset Height and Width
+console.log('Offset');
+    let ofwidth = box.offsetWidth;
+    let ofheight = box.offsetHeight;
+
+    console.log(ofwidth);
+    console.log(ofheight);
+
+</script>
