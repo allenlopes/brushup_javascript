@@ -12,3 +12,23 @@
                               defined the setInterval function */
     }
 </script>
+
+
+#3] Suppose we want to create an counter, wherein after time interval of every 2 seconds new number is printed, like first 1, then number 2,
+    then 3, 4, 5, .... likewise continue, so we can write the code as ->
+<div id="counter"> 1 </div>
+<script>
+    setInterval(test, 2000);
+    let x = 1;
+    function test(){
+        x++; /* It will increment the value of x after the every 2 second since time interval is set for 2 seconds only,
+        so first 1 is printed, then after 2 seconds 2 is printed, then after 2 seconds 3 is printed, then after 2 seconds
+        4 is printed, likewise so on... */
+        document.getElementById('counter').innerHTML = x; /* It will print the counter numbers onto our screen */
+        // console.log(x); /* It will print the counter numbers onto our console */
+    }
+</script>
+
+
+#4] Suppose we have created an counter, and after a particular time we want that counter should stop, like the interval
+should stop.

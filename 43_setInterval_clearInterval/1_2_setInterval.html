@@ -1,0 +1,13 @@
+<div id="counter"> 1 </div>
+
+<script>
+    setInterval(test, 2000);
+    let x = 1;
+    function test(){
+        x++; /* It will increment the value of x after the every 2 second since time interval is set for 2 seconds only,
+        so first 1 is printed, then after 2 seconds 2 is printed, then after 2 seconds 3 is printed, then after 2 seconds
+        4 is printed, likewise so on... */
+        document.getElementById('counter').innerHTML = x; /* It will print the counter numbers onto our screen */
+        // console.log(x); /* It will print the counter numbers onto our console */
+    }
+</script>
