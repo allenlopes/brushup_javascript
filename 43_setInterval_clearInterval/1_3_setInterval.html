@@ -1,0 +1,21 @@
+<!-- Suppose we have created an counter, and after a particular time we want that counter should stop, like the interval
+should stop then, -->
+
+<div id="counter"> 1 </div>
+
+<script>
+    let intCounter = setInterval(test, 500); // first we take the setInterval data in an variable.
+    let x = 1;
+    function test(){
+        if(x == 23){ /* It will print the value of x till number 23 only, since we have given the condition */
+            clearInterval(intCounter); /* We use clearInterval function to stop the counter in between where we have
+            condition specified. */
+        }
+        document.getElementById('counter').innerHTML = x; /* It will print the counter numbers onto our screen */
+        // console.log(x); /* It will print the counter numbers onto our console */
+        x++; /* It will increment the value of x after the every 1 second since time interval is set for 1 seconds only,
+        so first 1 is printed, then after 1 seconds 2 is printed, then after 1 seconds 3 is printed, then after 1 seconds
+        4 is printed, likewise so on... but here it will print upto value 23 only and not futher more since we have
+        set the condition in 'if statement' */
+    }
+</script>
