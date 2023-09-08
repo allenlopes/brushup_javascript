@@ -1,0 +1,11 @@
+<!-- Here I am giving an custom input of my name, wherein the setInterval function will print the "I am Allen Lopes"
+after each second, since I have set 1000 millisecond time, which is equal to 1 second.
+Note that it will display the output in console. -->
+
+<div id="counter"> 1 </div>
+<script>
+    setInterval(showName, 1000, "Allen", "Lopes");
+    function showName(fname, lname) {
+        console.log("I am "+fname+" "+lname);
+    }
+</script>

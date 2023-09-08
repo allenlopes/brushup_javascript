@@ -74,3 +74,32 @@ specified, and after every 2 secs we want the width to be increased by 10px, so 
         height: 50px;
     }
 </style>
+
+
+#6]
+<!-- Here we are showing a clock where it shows each seconds passing in a clock,
+To get better understanding of this, I should run the code and see the output of each second passing by -->
+
+<div id="counter"> 1 </div>
+<script>
+    setInterval(showClock, 1000);
+    function showClock() {
+        let d = new Date();
+        document.getElementById('counter').innerHTML = d.toLocaleTimeString();
+    }
+</script>
+
+
+
+#7]
+<!-- Here I am giving an custom input of my name, wherein the setInterval function will print the "I am Allen Lopes"
+after each second, since I have set 1000 millisecond time, which is equal to 1 second.
+Note that it will display the output in console. -->
+
+<div id="counter"> 1 </div>
+<script>
+    setInterval(showName, 1000, "Allen", "Lopes");
+    function showName(fname, lname) {
+        console.log("I am "+fname+" "+lname);
+    }
+</script>

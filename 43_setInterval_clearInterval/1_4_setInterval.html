@@ -3,7 +3,8 @@
     let x = 10;
     setInterval(incWidth, 2000);
     function incWidth() {
-        x = x+10;
+        // x++; /* It will increase the width of background colour by 10px after each 2 seconds. */
+        x = x+10; /* It will increase the width of background colour by 10px after each 2 seconds. */
         let c = document.getElementById('counter');
         c.style.width=x+ "px"
     }

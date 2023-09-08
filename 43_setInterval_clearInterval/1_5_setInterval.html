@@ -1,0 +1,11 @@
+<!-- Here we are showing a clock where it shows each seconds passing in a clock,
+To get better understanding of this, I should run the code and see the output of each second passing by -->
+
+<div id="counter"> 1 </div>
+<script>
+    setInterval(showClock, 1000);
+    function showClock() {
+        let d = new Date();
+        document.getElementById('counter').innerHTML = d.toLocaleTimeString();
+    }
+</script>
