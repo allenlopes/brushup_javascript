@@ -1,0 +1,18 @@
+<div id="counter"> 1 </div>
+<script>
+    let x = 10;
+    setInterval(incWidth, 2000);
+    function incWidth() {
+        x = x+10;
+        let c = document.getElementById('counter');
+        c.style.width=x+ "px"
+    }
+</script>
+
+<style>
+    #counter {
+        background-color: red;
+        width: 1px;
+        height: 50px;
+    }
+</style>
