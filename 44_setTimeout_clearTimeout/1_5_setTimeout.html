@@ -1,0 +1,33 @@
+<!--
+    we want that after certain amount of time, like say after 5 seconds,
+we want that if the output text is like 'Please enter name!' should only disappear after 5 seconds, then we do that
+by placing the setInterval() function inside if statement.
+-->
+
+<form>
+    <input type="test" id="name" />
+    <input type="button" onclick="submitData()" value="click" />
+</form>
+
+<div id="result"></div>
+
+<script>
+    function submitData(){
+        let name = document.getElementById('name').value;
+        if(name == ''){
+            document.getElementById('result').innerHTML='Please enter name!'; // If user doesn't types any value, it will display the -> if statement
+            setTimeout(clearForm, 5000); /* This setTimeout function will execute function clearForm() after 5000 milliseconds i.e
+                                        after 5 seconds */
+        }
+        else{
+            document.getElementById('result').innerHTML='Hello! '+name; // If user entered his name and clicked on submit, it will display the -> else statement
+        }
+
+    }
+
+    function clearForm() { /* The clearForm() function will set the value inside input box as empty after 5 seconds, and
+    also the output text.*/
+        document.getElementById('result').innerHTML='';
+        document.getElementById('name').value ='';
+    }
+</script>

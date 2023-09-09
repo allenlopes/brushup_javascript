@@ -34,4 +34,112 @@ Code ->
 </script>
 
 
-#4]
+#4] Suppose we created a form with input textbox and an button to submit the form,
+In the form an user has to type his/her name and once the user clicks on submit it should display on the screen the user's
+name along with 'Hello!' text, so if the user entered his name as "Allen" and clicked onsubmit button, the output should
+look like "Hello! Allen". AND
+If the user doesn't types any value inside the input box, and clicks on the submit button it should display on the screen
+the output as 'Please enter name!'
+Code ->
+
+<form>
+    <input type="test" id="name" />
+    <input type="button" onclick="submitData()" value="click" />
+</form>
+
+<div id="result"></div>
+
+<script>
+    function submitData(){
+        let name = document.getElementById('name').value;
+        if(name == ''){
+            document.getElementById('result').innerHTML='Please enter name!'; // If user doesn't types any value, it will display the -> if statement
+        }
+        else{
+            document.getElementById('result').innerHTML='Hello! '+name; // If user entered his name and clicked on submit, it will display the -> else statement
+        }
+        console.log(name);
+    }
+</script>
+
+
+
+#5] Taking reference of above code i.e #4] point, we want that after certain amount of time, like say after 5 seconds,
+we want the output text a like 'Please enter name!' and 'Hello! Allen' and also the input text inside our text box
+should not be there on the screen we can do that by setInterval
+Code ->
+
+<form>
+    <input type="test" id="name" />
+    <input type="button" onclick="submitData()" value="click" />
+</form>
+
+<div id="result"></div>
+
+<script>
+    function submitData(){
+        let name = document.getElementById('name').value;
+        if(name == ''){
+            document.getElementById('result').innerHTML='Please enter name!'; // If user doesn't types any value, it will display the -> if statement
+        }
+        else{
+            document.getElementById('result').innerHTML='Hello! '+name; // If user entered his name and clicked on submit, it will display the -> else statement
+        }
+        setTimeout(clearForm, 5000); /* This setTimeout function will execute function clearForm() after 5000 milliseconds i.e
+        after 5 seconds */
+    }
+
+    function clearForm() { /* The clearForm() function will set the value inside input box as empty after 5 seconds, and
+    also the output text.*/
+        document.getElementById('result').innerHTML='';
+        document.getElementById('name').value ='';
+    }
+</script>
+
+
+#5] Taking reference of above code i.e #5] point, we want that after certain amount of time, like say after 5 seconds,
+we want that if the output text is like 'Please enter name!' should only disappear after 5 seconds, then we do that
+by placing the setInterval() function inside if statement.
+Code->
+<form>
+    <input type="test" id="name" />
+    <input type="button" onclick="submitData()" value="click" />
+</form>
+
+<div id="result"></div>
+
+<script>
+    function submitData(){
+        let name = document.getElementById('name').value;
+        if(name == ''){
+            document.getElementById('result').innerHTML='Please enter name!'; // If user doesn't types any value, it will display the -> if statement
+            setTimeout(clearForm, 5000); /* This setTimeout function will execute function clearForm() after 5000 milliseconds i.e
+                                        after 5 seconds */
+        }
+        else{
+            document.getElementById('result').innerHTML='Hello! '+name; // If user entered his name and clicked on submit, it will display the -> else statement
+        }
+
+    }
+
+    function clearForm() { /* The clearForm() function will set the value inside input box as empty after 5 seconds, and
+    also the output text.*/
+        document.getElementById('result').innerHTML='';
+        document.getElementById('name').value ='';
+    }
+</script>
+
+
+#6]
+<!-- Suppose we want to give custom input of a fname and lname, where the setTimeout function will print the "Hello! Allen Lopes"
+after 2 seconds but only for single time, since I have set 2000 millisecond time, which is equal to 2 seconds.
+Note that it will display the output in console. -->
+Code ->
+
+<script>
+    setTimeout(test, 2000, "Allen","Lopes");
+
+    function test(fname, lname){
+        console.log("Hello! "+fname+' '+lname);
+    }
+</script>

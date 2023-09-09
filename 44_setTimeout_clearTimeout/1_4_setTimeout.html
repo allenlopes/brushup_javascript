@@ -4,7 +4,10 @@ In the form an user has to type his/her name and once the user clicks on submit 
 name along with 'Hello!' text, so if the user entered his name as "Allen" and clicked onsubmit button, the output should
 look like "Hello! Allen". AND
 If the user doesn't types any value inside the input box, and clicks on the submit button it should display on the screen
-the output as 'Please enter name!'
+the output as 'Please enter name!',
+we want that after certain amount of time, like say after 5 seconds,
+we want the output text a like 'Please enter name!' and 'Hello! Allen' and also the input text inside our text box
+should not be there on the screen we can do that by setInterval
  -->
 
 <form>
@@ -23,6 +26,13 @@ the output as 'Please enter name!'
         else{
             document.getElementById('result').innerHTML='Hello! '+name; // If user entered his name and clicked on submit, it will display the -> else statement
         }
-        console.log(name);
+        setTimeout(clearForm, 5000); /* This setTimeout function will execute function clearForm() after 5000 milliseconds i.e
+        after 5 seconds */
+    }
+
+    function clearForm() { /* The clearForm() function will set the value inside input box as empty after 5 seconds, and
+    also the output text.*/
+        document.getElementById('result').innerHTML='';
+        document.getElementById('name').value ='';
     }
 </script>
