@@ -1,0 +1,37 @@
+#1] We have seen in setInterval that whenever we want in a particular time being our code should be executed repeatedly.
+In setTimeout it means that our code will be executed in a specific time for one time.
+
+
+#2] Suppose we want text "Hello" to be printed for single time and after 3 seconds once we reload the page, so we can use setTimeout function.
+<script>
+    setTimeout(test, 3000); /* In bracket there are 2 parameters (the function to be executed, time interval(which is in milliseconds) for which the function defined should be executed)
+    So for the above setTimeout we want function test to run for single time after 3 seconds(since 3000 millisecond = 3 second)*/
+
+    function test() {
+        console.log("Hello!"); /* In console it will print the 'Hello' only for single time and after 3 seconds it is being executed, since we have
+                              defined the setTimeout function */
+    }
+</script>
+
+
+#3] Suppose we want that text "Hello" to be printed for single time and after 3 seconds once we reload the page, but we also
+specify a button wherein if we clicked on that button before 3 seconds then text "Hello" won't be printed in the console.
+Code ->
+<input type="button" onclick="clearTi()" value="Click" /> <!-- Here we specify the button -->
+
+<script>
+    let timeO = setTimeout(test, 3000); /* In bracket there are 2 parameters (the function to be executed, time interval(which is in milliseconds) for which the function defined should be executed)
+    So for the above setTimeout we want function test to run for single time after 3 seconds(since 3000 millisecond = 3 second)*/
+
+    function test() {
+        console.log("Hello!"); /* In console it will print the 'Hello' only for single time and after 3 seconds it is being executed, since we have
+                              defined the setTimeout function */
+    }
+
+    function clearTi(){
+        clearTimeout(TimeO); /* We have used clearTimeout() function to stop act before the function test is executed. */
+    }
+</script>
+
+
+#4]

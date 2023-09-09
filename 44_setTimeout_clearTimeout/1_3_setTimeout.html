@@ -1,0 +1,19 @@
+<form>
+    <input type="test" id="name" />
+    <input type="button" onclick="submitData()" value="click" />
+</form>
+
+<div id="result"></div>
+
+<script>
+    function submitData(){
+        let name = document.getElementById('name').value;
+        if(name == ''){
+            document.getElementById('result').innerHTML='Please enter name!';
+        }
+        else{
+            document.getElementById('result').innerHTML='Hello! '+name;
+        }
+        console.log(name);
+    }
+</script>

@@ -1,0 +1,15 @@
+<input type="button" onclick="clearTi()" value="Click" /> <!-- Here we specify the button -->
+
+<script>
+    let timeO = setTimeout(test, 3000); /* In bracket there are 2 parameters (the function to be executed, time interval(which is in milliseconds) for which the function defined should be executed)
+    So for the above setTimeout we want function test to run for single time after 3 seconds(since 3000 millisecond = 3 second)*/
+
+    function test() {
+        console.log("Hello!"); /* In console it will print the 'Hello' only for single time and after 3 seconds it is being executed, since we have
+                              defined the setTimeout function */
+    }
+
+    function clearTi(){
+        clearTimeout(TimeO); /* We have used clearTimeout() function to stop act before the function test is executed. */
+    }
+</script>
