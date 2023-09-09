@@ -140,6 +140,6 @@ Code ->
     setTimeout(test, 2000, "Allen","Lopes");
 
     function test(fname, lname){
-        console.log("Hello! "+fname+' '+lname);
+        console.log("Hello! "+fname+' '+lname); /*It will execute "Hello! Allen Lopes" after 2 seconds*/
     }
 </script>
