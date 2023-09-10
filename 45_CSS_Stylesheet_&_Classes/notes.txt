@@ -1,0 +1,137 @@
+#1]
+1. Inline Style
+    i) style
+   ii) setAttribute
+2. className
+3. classList
+
+
+#2]
+1.] Inline Style
+In Inline Style there are 2 ways to style, basically when we use .style we just add a particular style of our own to the text
+and cause no changes to the existing style which is already present on the text, whereas,
+when we use .setAttribute it removes or we can say ignore the existing style present on a particular text, and adds style
+of it's own.
+
+    i) style
+1st Code ->
+<div id="txt"> Allen </div>
+<script>
+    let txt = document.getElementById('txt');
+    txt.style.color ="red"; /* It will style the text inside <div> tag with id="txt" and give the text color as red */
+    txt.style.fontSize ="20px"; /* It will style the text inside <div> tag with id="txt" and make the text size as 20px */
+</script>
+
+
+2nd Code ->
+<div id="txt"> Allen </div>
+<input type="button" onclick="changeColorRed()" value="Red" />
+<input type="button" onclick="changeColorGreen()" value="Green" />
+
+<script>
+    let txt = document.getElementById('txt');
+
+function changeColorRed(){
+    txt.style.color ="red"; /* When someone clicks on Green button, It will style the text inside <div> tag with id="txt"
+                            and give the text color as red */
+}
+
+function changeColorGreen(){
+    txt.style.color ="green"; /* When someone clicks on Green button, It will style the text inside <div> tag with id="txt"
+                              and give the text color as green */
+}
+
+    txt.style.fontSize ="20px"; /* It will style the text inside <div> tag with id="txt" and make the text size as 20px */
+</script>
+
+
+    ii) setAttribute
+Code ->
+<div id="txt" style="font-size: 50px;"> Allen </div> <!-- Here for div tag we have already added a style with font size 50 px
+for the text, but when we click on the buttons red or green it will call the changeColorRed() or changeColorGreen() functions
+which has .setAttribute of inline style, and it removes the existing style on the text it has like we have already specified
+style for the text with font size as 50px but it will remove it and give the default font size and set the color as red as
+specified in the style. -->
+
+<input type="button" onclick="changeColorRed()" value="Red" />
+<input type="button" onclick="changeColorGreen()" value="Green" />
+
+<script>
+    let txt = document.getElementById('txt');
+
+function changeColorRed(){
+    txt.setAttribute('style','color:red'); /* When someone clicks on Green button, It will style the text inside <div> tag with id="txt"
+                            and give the text color as red */
+}
+
+function changeColorGreen(){
+    txt.setAttribute('style','color:green'); /* When someone clicks on Green button, It will style the text inside <div> tag with id="txt"
+                              and give the text color as green */
+}
+
+</script>
+
+
+#]
+Suppose we want to display a particular style we have applied for the text then we can do it ->
+Code ->
+<div id="txt" style="font-size: 50px;"> Allen </div>
+
+<input type="button" onclick="changeColorRed()" value="Red" />
+<input type="button" onclick="changeColorGreen()" value="Green" />
+<input type="button" onclick="getStyle()" value="Get Style" />
+
+<script>
+    let txt = document.getElementById('txt');
+
+function changeColorRed(){
+    txt.setAttribute('style','color:red'); /* When someone clicks on Green button, It will style the text inside <div> tag with id="txt"
+                            and give the text color as red */
+}
+
+function changeColorGreen(){
+    txt.setAttribute('style','color:green'); /* When someone clicks on Green button, It will style the text inside <div> tag with id="txt"
+                              and give the text color as green */
+}
+
+function getStyle() {
+    console.log(txt.style); /* It will give us the style we have applied for the text inside <div> tag with id="txt" */
+    console.log(txt.style.color); /* It will give us the color we have applied for the text inside <div> tag with id="txt" */
+}
+
+</script>
+
+
+#]
+Another method for fetching tyle given to particular text is using getComputedStyle() function
+<div id="txt" style="font-size: 50px;"> Allen </div>
+
+<input type="button" onclick="changeColorRed()" value="Red" />
+<input type="button" onclick="changeColorGreen()" value="Green" />
+<input type="button" onclick="getStyle()" value="Get Style" />
+
+<script>
+    let txt = document.getElementById('txt');
+
+function changeColorRed(){
+    txt.setAttribute('style','color:red'); /* When someone clicks on Green button, It will style the text inside <div> tag with id="txt"
+                            and give the text color as red */
+}
+
+function changeColorGreen(){
+    txt.setAttribute('style','color:green'); /* When someone clicks on Green button, It will style the text inside <div> tag with id="txt"
+                              and give the text color as green */
+}
+
+function getStyle() {
+
+/* Another method for fetching tyle given to particular text is using getComputedStyle() function */
+    let css = getComputedStyle(txt);
+    console.log(css); /* It will give us the style we have applied for the text inside <div> tag with id="txt" */
+    console.log(css.color); /* It will give us the color we have applied for the text inside <div> tag with id="txt" */
+    console.log(css.fontSize); /* It will give us the font size we have applied for the text inside <div> tag with id="txt" but if we
+        clicked on red button it will change the colour of the text to red and since we have used .setAttribute for styling it
+        will remove all the previous styling to the text and give us the new styling and it's default fontSize as 16px */
+}
+
+</script>

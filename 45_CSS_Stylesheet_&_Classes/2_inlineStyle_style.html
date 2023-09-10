@@ -1,0 +1,19 @@
+<div id="txt"> Allen </div>
+<input type="button" onclick="changeColorRed()" value="Red" />
+<input type="button" onclick="changeColorGreen()" value="Green" />
+
+<script>
+    let txt = document.getElementById('txt');
+
+function changeColorRed(){
+    txt.style.color ="red"; /* When someone clicks on Green button, It will style the text inside <div> tag with id="txt"
+                            and give the text color as red */
+}
+
+function changeColorGreen(){
+    txt.style.color ="green"; /* When someone clicks on Green button, It will style the text inside <div> tag with id="txt"
+                              and give the text color as green */
+}
+
+    txt.style.fontSize ="20px"; /* It will style the text inside <div> tag with id="txt" and make the text size as 20px */
+</script>

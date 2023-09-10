@@ -1,0 +1,31 @@
+<div id="txt" style="font-size: 50px;"> Allen </div>
+
+<input type="button" onclick="changeColorRed()" value="Red" />
+<input type="button" onclick="changeColorGreen()" value="Green" />
+<input type="button" onclick="getStyle()" value="Get Style" />
+
+<script>
+    let txt = document.getElementById('txt');
+
+function changeColorRed(){
+    txt.setAttribute('style','color:red'); /* When someone clicks on Green button, It will style the text inside <div> tag with id="txt"
+                            and give the text color as red */
+}
+
+function changeColorGreen(){
+    txt.setAttribute('style','color:green'); /* When someone clicks on Green button, It will style the text inside <div> tag with id="txt"
+                              and give the text color as green */
+}
+
+function getStyle() {
+
+/* Another method for fetching tyle given to particular text is using getComputedStyle() function */
+    let css = getComputedStyle(txt);
+    console.log(css); /* It will give us the style we have applied for the text inside <div> tag with id="txt" */
+    console.log(css.color); /* It will give us the color we have applied for the text inside <div> tag with id="txt" */
+    console.log(css.fontSize); /* It will give us the font size we have applied for the text inside <div> tag with id="txt" but if we
+        clicked on red button it will change the colour of the text to red and since we have used .setAttribute for styling it
+        will remove all the previous styling to the text and give us the new styling and it's default fontSize as 16px */
+}
+
+</script>

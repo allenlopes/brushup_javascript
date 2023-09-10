@@ -1,0 +1,25 @@
+<div id="txt" style="font-size: 50px;"> Allen </div>
+
+<input type="button" onclick="changeColorRed()" value="Red" />
+<input type="button" onclick="changeColorGreen()" value="Green" />
+<input type="button" onclick="getStyle()" value="Get Style" />
+
+<script>
+    let txt = document.getElementById('txt');
+
+function changeColorRed(){
+    txt.setAttribute('style','color:red'); /* When someone clicks on Green button, It will style the text inside <div> tag with id="txt"
+                            and give the text color as red */
+}
+
+function changeColorGreen(){
+    txt.setAttribute('style','color:green'); /* When someone clicks on Green button, It will style the text inside <div> tag with id="txt"
+                              and give the text color as green */
+}
+
+function getStyle() {
+    console.log(txt.style); /* It will give us the style we have applied for the text inside <div> tag with id="txt" */
+    console.log(txt.style.color); /* It will give us the color we have applied for the text inside <div> tag with id="txt" */
+}
+
+</script>

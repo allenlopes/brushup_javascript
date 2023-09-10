@@ -1,0 +1,23 @@
+<div id="txt" style="font-size: 50px;"> Allen </div> <!-- Here for div tag we have already added a style with font size 50 px
+for the text, but when we click on the buttons red or green it will call the changeColorRed() or changeColorGreen() functions
+which has .setAttribute of inline style, and it removes the existing style on the text it has like we have already specified
+style for the text with font size as 50px but it will remove it and give the default font size and set the color as red as
+specified in the style. -->
+
+<input type="button" onclick="changeColorRed()" value="Red" />
+<input type="button" onclick="changeColorGreen()" value="Green" />
+
+<script>
+    let txt = document.getElementById('txt');
+
+function changeColorRed(){
+    txt.setAttribute('style','color:red'); /* When someone clicks on Green button, It will style the text inside <div> tag with id="txt"
+                            and give the text color as red */
+}
+
+function changeColorGreen(){
+    txt.setAttribute('style','color:green'); /* When someone clicks on Green button, It will style the text inside <div> tag with id="txt"
+                              and give the text color as green */
+}
+
+</script>
