@@ -4,6 +4,13 @@
    ii) setAttribute
 2. className
 3. classList
+    i) add
+   ii) remove
+  iii) replace
+   iv) contains
+    v) length
+   vi) item
+  vii) toggle
 
 
 #2]
@@ -139,3 +146,24 @@ function getStyle() {
 
 
 2.]] className
+What className does is, if we have particular class, it will remove it or add new class.
+1st Code ->
+<div id="txt" class="box"> Allen </div>
+
+<script>
+    let txt = document.getElementById('txt')
+    console.log(txt.className);
+</script>
+
+2nd Code ->
+<div id="txt" class="box"> Allen </div>
+
+<script>
+    let txt = document.getElementById('txt')
+    // txt.className = "test"; /* It will add new classname to the existing classname which is "box" */
+    txt.className += " test" /* It will add new classname along with existing classname present */
+    console.log(txt.className);
+</script>
+
+
+3]] classList
