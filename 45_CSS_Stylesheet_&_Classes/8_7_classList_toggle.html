@@ -1,0 +1,21 @@
+<style>
+    .box{
+        color: red;
+    }
+</style>
+<div id="txt" class="box"> Allen </div>
+
+<input type="button" onclick="test()" value="Toggle" />
+
+<script>
+    /* What toggle does is if particular css is present it will remove it, and if it is not present it will add it.
+    Like we have made an button named toggle, whenever an user clicks on that button it will turn the already applied red
+    colour to the text "Allen" into normal colour, and if we click back on the button it will again add the red colour
+    Basically, it removes the class if it's present and vice versa.
+    To get proper understanding of this run the code and along with the ouput on the screen see the elements tab in console,
+    press the toggle button and check it. */
+    function test(){
+    let txt = document.getElementById('txt')
+    txt.classList.toggle('box');
+    }
+</script>

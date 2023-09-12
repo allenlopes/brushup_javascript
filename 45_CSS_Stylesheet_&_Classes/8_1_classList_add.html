@@ -1,8 +1,7 @@
-<div id="txt" class="box"> Allen </div>
+<div id="txt" class="box"> Allen </div> <!-- 1st css is class="box" -->
 
 <script>
     let txt = document.getElementById('txt')
-    txt.className += " test"
-    console.log(txt.classList); /* classList gives different indexes to each class, whether a new class name is added,
-    it gives each class name it's own index. */
+    txt.classList.add('test', 'test1'); // here we have used the .add function and also 2nd and 3rd css is adding 2 extra class names as, test and test1.
+    console.log(txt.classList.length); /* Length tells us how much total css is applied to the div tag with id="txt" */
 </script>

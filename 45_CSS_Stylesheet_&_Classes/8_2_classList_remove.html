@@ -1,7 +1,9 @@
-<div id="txt" class="box"> Allen </div> <!-- 1st css is class="box" -->
+<div id="txt" class="box test"> Allen </div> <!-- 1st css is class="box" -->
 
 <script>
     let txt = document.getElementById('txt')
-    txt.classList.add('test', 'test1'); // 2nd and 3rd css is adding 2 extra class names as, test and test1.
+    txt.classList.remove('test', 'test1'); /* here we have used remove function which will remove the class
+    with name test i.e class="box test" so it will remove the test from it and class new name will be class="box"
+    and also 2nd and 3rd css is adding 2 extra class names as, test and test1. */
     console.log(txt.classList.length); /* Length tells us how much total css is applied to the div tag with id="txt" */
 </script>
