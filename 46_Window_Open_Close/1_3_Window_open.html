@@ -1,0 +1,23 @@
+<a href="javascript:void(0)" onclick="openTab()"> Open Tab </a> <!-- When we click on Open Tab text, it opens a new tab on
+the same screen with the height=400 and width=400 which is set of the new tab and with the url
+specified in the function "openTab()" -->
+
+<a href="javascript:void(0)" onclick="closeTab()"> Close Tab </a>
+
+<script>
+
+    let op;
+
+    function openTab() {
+        let url = "https://google.com";
+        let name = "tab";
+        let options = "width=400; height=400";
+        op = window.open(url, name, options);
+    }
+
+    function closeTab() {
+        op.Close();
+    }
+
+
+</script>
