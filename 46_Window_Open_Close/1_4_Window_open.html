@@ -2,6 +2,8 @@
 the same screen with the height=400 and width=400 which is set of the new tab and with the url
 specified in the function "openTab()" -->
 
+<a href="javascript:void(0)" onclick="openTab2()"> Open Tab 2 </a>
+
 <a href="javascript:void(0)" onclick="closeTab()"> Close Tab </a> <!-- When we click on Close tab text, it will close the
 newly opened tab -->
 
@@ -9,9 +11,16 @@ newly opened tab -->
 
     let op;
 
-    function openTab() {
+    function openTab() { // function openTab
         let url = "https://google.com";
-        let name = "tab";
+        let name = "tab"; // name="tab"
+        let options = "width=400; height=400";
+        op=window.open(url, name, options);
+    }
+
+    function openTab2() { //function openTab2
+        let url = "https://google.com";
+        let name = "tab2"; // name="tab2"
         let options = "width=400; height=400";
         op=window.open(url, name, options);
     }

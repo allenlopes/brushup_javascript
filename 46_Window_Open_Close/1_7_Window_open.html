@@ -1,0 +1,15 @@
+<a href="javascript:void(0)" onclick="openTab()"> Open Tab </a>
+
+
+<script>
+
+    let op;
+
+    function openTab() {
+        let options = "width=400; height=400";
+        op=window.open("","_blank",""); /* We can use _self, _blank, _parent or _top */
+        op.document.write("Hello Worldd!!!") /* when user click on text "Open tab" it will show the display as "Hello World!!!"
+        in the new tab */
+    }
+
+</script>

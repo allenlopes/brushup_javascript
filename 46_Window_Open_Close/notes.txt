@@ -14,8 +14,161 @@ with the url specified in the function "openTab()" -->
 
 #2]
 window.open consists of 3 types of parameters in it, they are -> url, name, options
+<a href="javascript:void(0)" onclick="openTab()"> Open Tab </a> <!-- When we click on Open Tab text, it opens a new tab on
+the same screen with the height=400 and width=400 which is set of the new tab and with the url
+specified in the function "openTab()" -->
 
+<script>
+
+    function openTab() {
+        let url = "https://google.com";
+        let name = "tab";
+        let options = "width=400; height=400";
+    window.open(url, name, options)
+    }
+
+</script>
 
 
 #3]
 If we want to close the opened tab.
+<a href="javascript:void(0)" onclick="openTab()"> Open Tab </a> <!-- When we click on Open Tab text, it opens a new tab on
+the same screen with the height=400 and width=400 which is set of the new tab and with the url
+specified in the function "openTab()" -->
+
+<a href="javascript:void(0)" onclick="closeTab()"> Close Tab </a> <!-- When we click on Close tab text, it will close the
+newly opened tab -->
+
+<script>
+
+    let op;
+
+    function openTab() {
+        let url = "https://google.com";
+        let name = "tab";
+        let options = "width=400; height=400";
+        op=window.open(url, name, options);
+    }
+
+    function closeTab() {
+        op.close();
+    }
+
+
+</script>
+
+
+
+#4]
+We can also create 2 tabs and call them using function,
+<a href="javascript:void(0)" onclick="openTab()"> Open Tab </a> <!-- When we click on Open Tab text, it opens a new tab on
+the same screen with the height=400 and width=400 which is set of the new tab and with the url
+specified in the function "openTab()" -->
+
+<a href="javascript:void(0)" onclick="openTab2()"> Open Tab 2 </a>
+
+<a href="javascript:void(0)" onclick="closeTab()"> Close Tab </a> <!-- When we click on Close tab text, it will close the
+newly opened tab -->
+
+<script>
+
+    let op;
+
+    function openTab() { // function openTab
+        let url = "https://google.com";
+        let name = "tab"; // name="tab"
+        let options = "width=400; height=400";
+        op=window.open(url, name, options);
+    }
+
+    function openTab2() { //function openTab2
+        let url = "https://google.com";
+        let name = "tab2"; // name="tab2"
+        let options = "width=400; height=400";
+        op=window.open(url, name, options);
+    }
+
+    function closeTab() {
+        op.close();
+    }
+
+
+</script>
+
+
+
+#5] Suppose we want that our both the tabs remain in one single tab, so we give name="tab" which should be same for both
+the tabs name field.
+<a href="javascript:void(0)" onclick="openTab()"> Open Tab </a> <!-- When we click on Open Tab text, it opens a new tab on
+the same screen with the height=400 and width=400 which is set of the new tab and with the url
+specified in the function "openTab()" -->
+
+<a href="javascript:void(0)" onclick="openTab2()"> Open Tab 2 </a>
+
+<a href="javascript:void(0)" onclick="closeTab()"> Close Tab </a> <!-- When we click on Close tab text, it will close the
+newly opened tab -->
+
+<script>
+
+    let op;
+
+    function openTab() {
+        let url = "https://google.com";
+        let name = "tab"; // we are specifying the name="tab" here
+        let options = "width=400; height=400";
+        op=window.open(url, name, options);
+    }
+
+    function openTab2() {
+        let url = "https://google.com";
+        let name = "tab"; // we are specifying the same name="tab" here too
+        let options = "width=400; height=400";
+        op=window.open(url, name, options);
+    }
+
+    function closeTab() {
+        op.close();
+    }
+
+</script>
+
+
+#6] Suppose the new tab which is being opened, we don't want the url to be opened when someone clicks on it,
+rather it displays a content when new tab is being opened.
+<a href="javascript:void(0)" onclick="openTab()"> Open Tab </a>
+
+<a href="javascript:void(0)" onclick="closeTab()"> Close Tab </a> <!-- When we click on Close tab text, it will close the
+newly opened tab -->
+
+<script>
+
+    let op;
+
+    function openTab() {
+        let options = "width=400; height=400";
+        op=window.open("","",options);
+        op.document.write("Hello Worldd!!!") /* when user click on text "Open tab" it will show the display as "Hello World!!!"
+        in the new tab */
+    }
+
+</script>
+
+
+#7] When we click on text, we want to redirect it to open new window on the same tabs, or display the output on the
+same tab, etc,,
+we can do it by using _self, _blank, _parent or _top ->
+
+<a href="javascript:void(0)" onclick="openTab()"> Open Tab </a>
+
+<script>
+
+    let op;
+
+    function openTab() {
+        let options = "width=400; height=400";
+        op=window.open("","_blank",""); /* We can use _self, _blank, _parent or _top */
+        op.document.write("Hello Worldd!!!") /* when user click on text "Open tab" it will show the display as "Hello World!!!"
+        in the new tab */
+    }
+
+</script>
