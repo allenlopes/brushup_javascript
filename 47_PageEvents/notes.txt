@@ -1,0 +1,5 @@
+#1] There are total 4 events,
+    1. DOMContentLoaded
+    2. Load
+    3. beforeUpload
+    4. Upload
