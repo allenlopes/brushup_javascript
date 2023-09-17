@@ -1,0 +1,38 @@
+<head>
+    <style>
+        body{
+            background-color: black;
+        }
+        #div{
+            background-color: blue;
+            padding: 50px;
+        }
+        #a{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="div">
+        <a href="javascript:void(0)" id="a">Click</a>
+    </div>
+
+<script>
+
+    document.getElementById('a').addEventListener("click",
+    function() {
+        console.log("A Click");
+    }, true);
+
+    document.getElementById('div').addEventListener("click",
+    function() {
+        console.log("Div Click");
+    }, true);
+
+    document.addEventListener("click", function() {
+        console.log("Body Click");
+    }, true);
+
+</script>
+
+</body>

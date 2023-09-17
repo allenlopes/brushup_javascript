@@ -1,0 +1,57 @@
+#1] Here we are discussing Event Bubbling and Event Capturing
+    1. Child to Parent - Event Bubbling
+    2. Parent to Child - Event Capturing
+    3. Only Click Event
+
+#2] Event Bubbling ->
++ It is a process that starts with the element that triggered the event and
+  then bubbles up to the containing elements in the hierarchy.
+
++ It's like andar se bahar tak jana.
+Code Understanding can be ->
+<div id="1">
+    <div id="2">
+        <div id="3">
+        </div>
+    </div>
+</div>
+
+It's like when we click on id="3", then, it will first load the contents of id="3", then id="2", then id="1".
+So, as we can see it goes from inside to outside.
+
+
+#3] Event Capturing ->
++ An event propagates from the outermost element to the target element.
+  It is the opposite of event bubbling, where events propagate outwards from the target to the outer elements.
+
++ It's like bahar se andar tak jana.
+Code Understanding can be ->
+<div id="1">
+    <div id="2">
+        <div id="3">
+        </div>
+    </div>
+</div>
+
+It's like when we click on id="3", it will first load the contents of id="1", then id="2" then finally id="3".
+So, as we can see it goes from outside to inside.
+
+
+#4] Single Event OR Only click event
+
++ Here we are just cliking on a Single event and only that part's content is loading.
+
++ It's like jo click ho raha hai wahi load ho raha hai nothing else.
+Code Understanding can be ->
+<div id="1">
+    <div id="2">
+        <div id="3">
+        </div>
+    </div>
+</div>
+
+It's like when we click on id="3", it will only load the contents of id="3", and not any other id's content is loaded.
+ANOTHER SCENARIO CAN BE,
+We want to load the contents of the id we are clicking and also the next id's content and stop there.
+So basically we want to load 2 id's contents, so we can use stopPropagation() function for an particular id to stop
+the event at that place and not continue further on.

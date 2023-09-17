@@ -1,0 +1,39 @@
+<head>
+    <style>
+        body{
+            background-color: black;
+        }
+        #div{
+            background-color: blue;
+            padding: 50px;
+        }
+        #a{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="div">
+        <a href="javascript:void(0)" id="a">Click</a>
+    </div>
+
+<script>
+
+    document.getElementById('a').addEventListener("click",
+    function() {
+        console.log("A Click");
+    });
+
+    document.getElementById('div').addEventListener("click",
+    function(e) {
+        console.log("Div Click");
+        e.stopPropagation(); // we are using stopPropagation() to stop the event bubbling and event capturing for this particular event
+    });
+
+    document.addEventListener("click", function() {
+        console.log("Body Click");
+    });
+
+</script>
+
+</body>
