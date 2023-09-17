@@ -1,5 +1,17 @@
 #1] There are total 4 events,
     1. DOMContentLoaded
     2. Load
-    3. beforeUpload
-    4. Upload
+    3. beforeUnload
+    4. Unload
+
+
+
+
+3. beforeUnload event tells us that jab bhi aapka page unload ho raha hoga, matlb already jo hamlogo ne for example, ek
+form fill kiya hai kisi page ko aur agar ham page ko bymistakely reload kar rahe honge toh yeh pehele ek warning type sa
+deta hai ki "Changes you made might not be saved" toh waise.
+
+
+4. Unload event basically koi warning type sa nahi deta hai jo "beforeUnload" deta hai; yeh sidha page ko load kardeta
+hai toh agar kisi ne for eg, form fill kiya hoga toh uska pura contents ja sakta hai without any warning, so mostly
+yeh Unload event ham avoid kar sakte hai use karne se.
