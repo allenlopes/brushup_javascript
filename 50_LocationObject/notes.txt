@@ -1,0 +1,8 @@
+#1] Location Object is used jab bhi hame url ki info. nikalni ho, usme kuch assign karna ho, kuch check karna ho,
+ek page se dusre page par redirect karna ho.
+
+#2] Some of the Location Object's methods are,
+    1. href
+    2. assign
+    3. replace
+    4. reload, etc..

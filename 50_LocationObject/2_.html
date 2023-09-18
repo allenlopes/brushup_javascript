@@ -1,0 +1,17 @@
+<a href="javascript:void(0)" onclick="click_me()">Click Me</a>
+
+<script>
+    function click_me(){
+        //window.location.href="https://allenlopes.netlify.app/"
+
+        // window.location.assign("https://allenlopes.netlify.app/"); /* window.location.assign method is same like window.location.href */
+
+        window.location.replace("https://allenlopes.netlify.app/")  /* window.location.replace method is same like
+        window.location.assign, it redirects to new page when clicked on it, but it doesn't keeps the history,
+        i.e when we click on back button to go to previously opened site, it does not have it's history saved and redirect
+        us to browser's default page. */
+
+        window.location.reload(); /* window.location.reload method doesn't takes any parameters like the website address etc..,
+        it reloads the same web page we are currently in */
+    }
+</script>
