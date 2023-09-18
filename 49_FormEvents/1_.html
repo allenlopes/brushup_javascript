@@ -2,9 +2,16 @@
     <input type="text" id="name" />
 </form>
 
+<div id="result"></div>
+
 <script>
     let name = document.getElementById("name");
     name.addEventListener('input', function(){
-        console.log(this.value);
+        if(this.value == ''){
+            document.getElementById("result").innerHTML = "";
+        }
+        else{
+            document.getElementById("result").innerHTML = "Welcome "+this.value;
+        }
     });
 </script>
