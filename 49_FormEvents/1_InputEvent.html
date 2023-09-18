@@ -6,7 +6,7 @@
 
 <script>
     let name = document.getElementById("name");
-    name.addEventListener('input', function(){
+    name.addEventListener('input', function(){ // input event
         if(this.value == ''){
             document.getElementById("result").innerHTML = "";
         }

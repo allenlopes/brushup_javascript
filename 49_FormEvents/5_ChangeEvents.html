@@ -1,0 +1,13 @@
+<form>
+    <input type="text" id="name" />
+</form>
+
+<div id="result"></div>
+
+<script>
+    let name = document.getElementById("name");
+    name.addEventListener('change', function(){ // change event which keeps track of the values being changed inside the input box
+        console.log(this.value);
+    });
+
+</script>

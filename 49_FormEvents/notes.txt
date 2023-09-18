@@ -1,0 +1,9 @@
+#1] There are different types of Form Events:-
+    1. Input Event
+    2. Focus and Blue Event
+    3. Search Event
+    4. Submit Event
+    5. Change Event
+
+
+#2] This form events are usefull when we want to update on our text box.

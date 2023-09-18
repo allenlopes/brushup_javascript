@@ -1,0 +1,18 @@
+<form>
+    <input type="text" id="name" />
+</form>
+
+<div id="result"></div>
+
+<script>
+    let name = document.getElementById("name");
+    name.addEventListener('focus', function(){ // focus event
+        this.style.backgroundColor = "red"; /* When we click inside input box it will change the color of the input box as red;
+        but once we click outside the input box it will change the color of the input box to white */
+    });
+
+    name.addEventListener('blur', function(){ // blur event
+        this.style.backgroundColor = "white";
+    });
+
+</script>

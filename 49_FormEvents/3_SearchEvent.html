@@ -1,0 +1,12 @@
+<form>
+    <input type="search" id="name" />
+</form>
+
+<div id="result"></div>
+
+<script>
+    let name = document.getElementById("name");
+    name.addEventListener('search', function(){ // search event which is used to search data
+        alert('Search Data '+this.value);
+    });
+</script>
