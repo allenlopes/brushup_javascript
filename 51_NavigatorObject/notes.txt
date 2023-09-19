@@ -1,0 +1,2 @@
+#1] Navigator is mainly used for cookie purpose and to know more information about the browser we are using,
+    like the userAgent, appcode, etc.. which we can see in console after running 1_.html file.
