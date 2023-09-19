@@ -1,0 +1,9 @@
+<script>
+
+    let arr = ["Allen", "Eph", "Lopes"];
+
+    sessionStorage.setItem('arrname',JSON.stringify(arr)); // storing the data in the form of array in the session storage
+
+    // the data which is stored as array inside session storage and i am retrieving it in form of array ->
+    console.log(JSON.parse (sessionStorage.getItem('arrname')))
+</script>
