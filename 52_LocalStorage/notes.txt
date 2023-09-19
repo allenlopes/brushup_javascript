@@ -1,0 +1,6 @@
+#1] If we want to store a particular information in our browser we use Local Storage.
+
+#2] Local Storage is accessible only on the particular web page on which we have saved it, it won't be accessed on any other page.
+
+#3] Data inside Local Storage is not removed until we manually delete it, although we can delete it with session storage,
+    which we will see later on.

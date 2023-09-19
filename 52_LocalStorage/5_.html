@@ -1,0 +1,8 @@
+<!-- Put data into local storage in form of array -->
+
+<script>
+    let arr=["Allenn", "Saaa"];
+    localStorage.setItem('name2',JSON.stringify(arr)); // it will store the data inside our browser's local storage in form of array bcoz we have used JSON.stringify . We should run the code and see the result.
+
+    console.log(JSON.parse(localStorage.getItem('name2'))); // it will display the data which is stored as an array inside our browser's local storage in the form of array only bcoz we have used JSON.parse .
+</script>

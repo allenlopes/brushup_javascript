@@ -1,0 +1,13 @@
+<!-- Suppose we have saved 'name' and 'name1' in our local storage and we want to display the only the 'name' or 'name1' from local storage -->
+
+<script>
+    let name = "Allen";
+
+    //localStorage.setItem('name', name);
+    //localStorage.setItem('name1', 'Saa');
+    console.log(localStorage.getItem('name')); // it will display the name which is 'Allen'
+    console.log(localStorage.getItem('name1')); // it will display the name1 which is 'Saa'
+
+    localStorage.removeItem('name'); // it will only remove the name from local storage
+
+</script>
