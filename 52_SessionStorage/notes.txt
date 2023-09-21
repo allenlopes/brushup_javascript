@@ -3,4 +3,4 @@
 #2] In session storage once we close the browser the data vanish aways.
     Basically jab ham browser band karke chalu karte hai, tab jo bhi data session storage mai save hai woh sab delete ho
     jata hai, unlike Local storage, jisme agar data store ho jaye toh browser close hokar firse chalu karre tab bhi same
-    reheta hai jab tak ham khud manually usse delete nahi karte.
+    reheta hai jab tak ham khud manually usse delete nahi karte hai.
