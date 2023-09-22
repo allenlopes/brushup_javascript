@@ -1,0 +1,2 @@
+This is a Background color changer project. When you click on particular coloured box, it will change the Background
+color of the window according to the color of clicked box.
