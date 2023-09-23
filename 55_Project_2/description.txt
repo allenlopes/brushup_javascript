@@ -1,0 +1,1 @@
+This project is about BMI calculator i.e Body Mass Index calculator.
