@@ -1,10 +1,10 @@
-const randomNumber = parseInt(Math.random()*100 + 1); // Math.random() will generate random numbers, and parseInt will convert that decimal nos. to integer nos.
+let randomNumber = parseInt(Math.random()*100 + 1); // Math.random() will generate random numbers, and parseInt will convert that decimal nos. to integer nos.
 
 const submit = document.querySelector('#subt');
 const userInput = document.querySelector('#guessField');
-const guessSlot = document.querySelector(".guesses");
-const remaining = document.querySelector(".lastResult");
-const lowOrHi = document.querySelector(".lowOrHi");
+const guessSlot = document.querySelector('.guesses');
+const remaining = document.querySelector('.lastResult');
+const lowOrHi = document.querySelector('.lowOrHi');
 const startOver = document.querySelector('.resultParas');
 
 const p = document.createElement('p');
@@ -19,6 +19,7 @@ if(playGame){
     submit.addEventListener('click', function(evnt){
         evnt.preventDefault(); // preventDefault() matlab ham evnt ko bolte hai values ko kahi mat leke jao vahi pe rokke rakho.
         const guess = parseInt(userInput.value)
+        console.log(guess);
         validateGuess(guess);
     });
 };
@@ -55,14 +56,14 @@ function checkGuess(guess){
     number we dispay the message using displayMessage() function and, if it's not equal to tandom number we check here
     if it's low value than the random no. or high value than the random no. */
     if(guess === randomNumber){
-        displayMessage(`You Guessed it right`)
-        endGame()
+        displayMessage(`You Guessed it right`);
+        endGame();
     }
     else if(guess < randomNumber){
-        displayMessage(`Number is Tooo Low`)
+        displayMessage(`Number is Tooo Low`);
     }
     else if(guess > randomNumber){
-        displayMessage(`Number is Too High`)
+        displayMessage(`Number is Too High`);
     }
 };
 
@@ -85,9 +86,27 @@ function displayMessage(message){
 
 function endGame(){
     // for ending the game
+    userInput.value = '';
+    userInput.setAttribute('disabled', ''); // setAttribute is in key value pair, here we gave key as 'disabled' and left the value as '' which is blank so that to end the game
+    p.classList.add('button');
+    p.innerHTML = `<h2 id="newGame">Start new Game</h2>`;
+    startOver.appendChild(p);
+    playGame = false;
+    newGame();
 };
 
 function newGame(){
     // for starting new game
+    const newGameButton = document.querySelector('#newGame')
+    newGameButton.addEventListener('click', function(evnt){
+        randomNumber = parseInt(Math.random() * 100 + 1);
+        prevGuess = [];
+        numGuess = 1;
+        guessSlot.innerHTML = '';
+        remaining.innerHTML = `${11 - numGuess}`;
+        userInput.removeAttribute('disabled');
+        startOver.removeChild(p);
+        playGame = true
+    });
 };
 
