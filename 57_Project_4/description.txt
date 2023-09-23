@@ -1,0 +1,3 @@
+We are making a project wherein a user guesses a number of his/her choice,
+The user can guess number only for 10 attempts.
+Whatever the user have guessed the previous number, we are storing it in an array.
